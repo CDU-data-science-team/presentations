@@ -131,7 +131,7 @@ class: inverse
 
 # Contact
 
-[`r icons::fontawesome("twitter")` @DataScienceNott](https://twitter.com/ChrisBeeley)<br/>
+[`r icons::fontawesome("twitter")` @ChrisBeeley](https://twitter.com/ChrisBeeley)<br/>
 [`r icons::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)<br/>
 [`r icons::fontawesome("paper-plane")` chris.beeley@notthshc.nhs.uk](mailto:chris.beeley@nottshc.nhs.uk)
 
