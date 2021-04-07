@@ -144,6 +144,26 @@ xaringanExtra::use_logo(
 
 ---
 
+# Gitflow
+
+* This isn't Shiny specific but we try to adopt a clear approach to gitflow and GitHub
+* Issues are filed for each update/ bugfix and given a branch with the issue number
+* Pull requests are made against the development branch and merged by the "lead" for each repo
+* We use semantic versioning for all packages and apps and branch dev to a release branch
+* The master is "clean" and should always work
+* Using namespaced modules helps us to collaborate on GitHub easily
+
+---
+
+# {golem}
+
+> [{golem}](https://github.com/ThinkR-open/golem) is an opinionated framework for building production-grade shiny applications
+
+* In golem, all Shiny applications are packages
+* Golem includes lots of 
+
+---
+
 class: inverse
 
 # Contact

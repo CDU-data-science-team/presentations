@@ -121,13 +121,33 @@ top:0em;right:1em;
 
 * Modules allow you to reuse Shiny code
 
-&lt;iframe src=&quot;https://involve.nottshc.nhs.uk:8443/experiencesdashboard/&quot; width=&quot;1000&quot; height=&quot;300&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://involve.nottshc.nhs.uk:8443/experiencesdashboard/&quot; width=&quot;1000&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;
 
 ---
 
 # But wait, there&#39;s more
 
-* 
+* Modules are _namespaced_
+* This makes it easier to collaborate with *yourself*
+* The unit of collaboration becomes the module
+* I&#39;ve never collaborated on a Shiny app without modules and I never want to
+
+---
+
+# Gitflow
+
+* This isn&#39;t Shiny specific but we try to adopt a clear approach to gitflow and GitHub
+* Issues are filed for each update/ bugfix and given a branch with the issue number
+* Pull requests are made against the development branch and merged by the &quot;lead&quot; for each repo
+* We use semantic versioning for all packages and apps and branch dev to a release branch
+* The master is &quot;clean&quot; and should always work
+* Using namespaced modules helps us to collaborate on GitHub easily
+
+---
+
+# {golem}
+
+&gt; {golem} is an opinionated framework for building production-grade shiny applications
 
 ---
 
