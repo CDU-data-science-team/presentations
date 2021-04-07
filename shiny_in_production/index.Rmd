@@ -98,9 +98,9 @@ xaringanExtra::use_logo(
 # The new wave
 
 * NONE of these ideas are mine
-* Big credit goes to Colin Fay and the team at ThinkR https://thinkr.fr/
-* In particular this book https://engineering-shiny.org/
-* And this book https://mastering-shiny.org/ 
+* Big credit goes to Colin Fay and the team at [ThinkR](https://thinkr.fr/) 
+* In particular [Engineering Shiny apps](https://engineering-shiny.org/) 
+* And [Mastering Shiny](https://mastering-shiny.org/)
 * I’m going to be opinionated with other people’s opinions `r emoji("wink")`
 * (My team and I are not perfect- but we’re trying to be `r emoji("wink")`)
 
@@ -124,6 +124,23 @@ xaringanExtra::use_logo(
 * Tested
 * Shareable
 * Business logic in server.R `r icons::fontawesome("arrow-right")` business logic in functions `r icons::fontawesome("arrow-right")` business logic in team package
+
+---
+
+# Modules
+
+* Modules allow you to reuse Shiny code
+
+<iframe src="https://involve.nottshc.nhs.uk:8443/experiencesdashboard/" width="1000" height="400"></iframe>
+
+---
+
+# But wait, there's more
+
+* Modules are _namespaced_
+* This makes it easier to collaborate with *yourself*
+* The unit of collaboration becomes the module
+* I've never collaborated on a Shiny app without modules and I never want to
 
 ---
 
