@@ -8,3 +8,6 @@ https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1
 
 <iframe src="https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1" width="600" height="400" loading="lazy" allowfullscreen></iframe> <script>fitvids('.shareagain', {players: 'iframe'});</script>
 
+## Productionising Shiny
+
+[https://cdu-data-science-team.github.io/presentations/shiny_in_production](https://cdu-data-science-team.github.io/presentations/shiny_in_production)

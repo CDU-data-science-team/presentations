@@ -1,0 +1,303 @@
+---
+title: "Shiny in production"
+subtitle: "Brighton R"
+author: "Chris Beeley"
+institute: "Nottinghamshire Healthcare NHS Foundation Trust"
+date: "8th April 2021"
+output:
+  xaringan::moon_reader:
+    css: 
+      - default
+      - css/nhsr.css
+      - css/nhsr-fonts.css
+    lib_dir: libs
+    seal: false
+    self_contained: true
+    nature:
+      highlightStyle: googlecode
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+class: title-slide, left, bottom
+
+```{r setup, include = FALSE}
+
+library(knitr)
+library(tidyverse)
+library(nhsrtheme)
+library(xaringanExtra)
+library(emojifont)
+
+# set default options
+
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300,
+               dev.args = list(type = "cairo"),
+               echo = TRUE,
+               warning = FALSE,
+               message = FALSE,
+               error = FALSE)
+
+# uncomment the following lines if you want to use the NHS-R theme colours by default
+scale_fill_continuous <- partial(scale_fill_nhs, discrete = FALSE)
+scale_fill_discrete <- partial(scale_fill_nhs, discrete = TRUE)
+scale_colour_continuous <- partial(scale_colour_nhs, discrete = FALSE)
+scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
+
+library(xaringanExtra)
+xaringanExtra::use_share_again() # need to get the slide button on html view
+
+```
+
+```{r echo=FALSE}
+
+xaringanExtra::use_logo(
+  image_url = "img/nottshc.png",
+  exclude_class = c("title-slide", "inverse", "hide-logo"),
+  width = "300px",
+  height = "200px",
+  position = css_position(top = "0em", right = "1em")
+)
+
+```
+
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author` | `r rmarkdown::metadata$date`
+</br>
+
+---
+
+# Introduction
+
+* This presentation is about Shiny in production
+* It’s deliberately pitched at people who are using Shiny already and want to use it better
+* If you’re not a Shiny user yet hopefully you will still get an understanding of developments in Shiny
+
+---
+
+# The bad old days
+
+* I started using Shiny very early on
+* Most of the development at the time was based on adding functionality and increasing the power of Shiny
+* It was a time of rapid development but it led to:
+* Enormous (2000+ line) server.R files
+* Difficult to debug
+* Difficult to test
+* Difficult to collaborate on
+* Difficult to deploy
+
+---
+
+# The new wave
+
+* NONE of these ideas are mine
+* Big credit goes to Colin Fay and the team at [ThinkR](https://thinkr.fr/) 
+* In particular [Engineering Production-Grade Shiny Apps](https://engineering-shiny.org/) 
+* And [Mastering Shiny](https://mastering-shiny.org/)
+* I’m going to be opinionated with other people’s opinions `r emoji("wink")`
+* (My team and I are not perfect- but we’re trying to be `r emoji("wink")`)
+
+---
+
+# Functions!
+
+* Everybody knows you should use functions…
+    * Don’t they?
+* Ideally a Shiny application should consist ONLY of reactive code
+* There should be NO computation (“business logic”) in server.R
+* Even if you only do it once, put it in a function
+* Functions are self documenting
+* Functions are easy to test
+* More recently Shiny has added automatic running of code in R/ folder (1.5?)
+
+---
+
+# Packages
+
+* Documented
+* Tested
+* Shareable
+* Business logic in server.R `r icons::fontawesome("arrow-right")` business logic in functions `r icons::fontawesome("arrow-right")` business logic in team package
+
+---
+
+# Modules
+
+* Modules allow you to reuse Shiny code
+
+<iframe src="https://involve.nottshc.nhs.uk:8443/experiencesdashboard/" width="1000" height="400"></iframe>
+
+---
+
+# But wait, there's more
+
+* Modules are _namespaced_
+* This makes it easier to collaborate with *yourself*
+* The unit of collaboration becomes the module
+* I've never collaborated on a Shiny app without modules and I never want to
+
+---
+
+# Scoping data
+
+* This is a blessing and a curse
+
+```{r, eval=FALSE, echo=TRUE}
+
+endo_data <- mod_clean_and_merge_server("clean_and_merge_ui_1", 
+                                        header_filename = "endo.rda")
+  
+path_data <- mod_clean_and_merge_server("clean_and_merge_ui_2", 
+                                        header_filename = "path.rda")
+
+# in module
+
+reactive(
+  endoData()
+)
+
+```
+
+---
+
+# Passing data around
+
+```{r, eval=FALSE, echo=TRUE}
+
+# server.R
+
+merge_data <- mod_merge_data_server("merge_data_ui_1", endo_data = endo_data)
+
+# module
+
+mod_merge_data_server <- function(id, endo_data, path_data, load_prev){
+  moduleServer( id, function(input, output, session){
+    # ...
+
+    selectInput(session$ns("endoDate"), "Endoscopy date", 
+                           choices = names(endo_data()))
+}
+
+```
+
+---
+
+# Gitflow
+
+* This isn't Shiny specific but we try to adopt a clear approach to gitflow and GitHub
+* Issues are filed for each update/ bugfix and given a branch with the issue number
+* Pull requests are made against the development branch and merged by the "lead" for each repo
+* We use semantic versioning for all packages and apps and branch dev to a release branch
+* The master is "clean" and should always work
+* Using namespaced modules helps us to collaborate on GitHub easily
+
+---
+
+# {golem}
+
+> [{golem}](https://github.com/ThinkR-open/golem) is an opinionated framework for building production-grade shiny applications
+
+* In golem, all Shiny applications are packages
+* Packages make it easy to test, manage dependencies, and deploy
+
+```{r, eval=FALSE, echo=TRUE}
+# install.packages("remotes")
+remotes::install_github("CDU-data-science-team/cmhsDashboard")
+library(cmhsDashboard)
+run_app()
+
+```
+
+* This is magic!
+
+---
+
+# Golem is your new best friend
+
+* Golem includes lots of code to make writing Shiny applications and packages easier
+* {usethis}
+    * Licence
+    * Dependencies
+    * data/ folder
+    * Git
+* {testthat}
+* {golem}
+    * Favicons
+    * Add modules
+    * Deploy RStudio Connect/ Shiny server/ shinyapps/ Docker
+
+---
+
+# Package dependencies
+
+* Managed more easily because of packaging
+* Golem encourages, but doesn't mandate, making explicit function calls from packages
+
+```{r, eval = FALSE, echo = TRUE}
+
+df <- data %>%  
+  tidyr::unnest(question_type) %>% 
+  dplyr::mutate(dplyr::across(all_of(question_type), as.numeric)) %>% 
+  dplyr::left_join(category_table, join_lookup)
+
+```
+
+* This is again extremely useful for collaborating
+
+---
+
+# Golem YAML
+
+* It's early days for us with this but this is a very powerful and simple tool
+
+```{r, eval=FALSE, echo=TRUE}
+
+default:
+  golem_name: staffSurveyNew
+  golem_version: 0.0.0.9000
+  app_prod: no
+  where: github #<<
+production:
+  app_prod: yes
+dev:
+  golem_wd: !expr here::here()
+
+```
+
+---
+
+# In the app
+
+```{r, eval=FALSE, echo=TRUE}
+
+where_am_i <- get_golem_config("where")
+
+if(where_am_i == "github"){
+  
+  # do something
+} else {
+  
+  # do something else
+}
+
+
+```
+
+
+---
+
+class: inverse
+
+# Contact
+
+[`r icons::fontawesome("twitter")` @ChrisBeeley](https://twitter.com/ChrisBeeley)<br/>
+[`r icons::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)<br/>
+[`r icons::fontawesome("paper-plane")` chris.beeley@notthshc.nhs.uk](mailto:chris.beeley@nottshc.nhs.uk)
+
