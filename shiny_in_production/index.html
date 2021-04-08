@@ -89,7 +89,7 @@ top:0em;right:1em;
 
 * NONE of these ideas are mine
 * Big credit goes to Colin Fay and the team at [ThinkR](https://thinkr.fr/) 
-* In particular [Engineering Shiny apps](https://engineering-shiny.org/) 
+* In particular [Engineering Production-Grade Shiny Apps](https://engineering-shiny.org/) 
 * And [Mastering Shiny](https://mastering-shiny.org/)
 * I’m going to be opinionated with other people’s opinions 😉
 * (My team and I are not perfect- but we’re trying to be 😉)
@@ -105,6 +105,7 @@ top:0em;right:1em;
 * Even if you only do it once, put it in a function
 * Functions are self documenting
 * Functions are easy to test
+* More recently Shiny has added automatic running of code in R/ folder (1.5?)
 
 ---
 
@@ -134,6 +135,48 @@ top:0em;right:1em;
 
 ---
 
+# Scoping data
+
+* This is a blessing and a curse
+
+
+```r
+endo_data &lt;- mod_clean_and_merge_server(&quot;clean_and_merge_ui_1&quot;, 
+                                        header_filename = &quot;endo.rda&quot;)
+  
+path_data &lt;- mod_clean_and_merge_server(&quot;clean_and_merge_ui_2&quot;, 
+                                        header_filename = &quot;path.rda&quot;)
+
+# in module
+
+reactive(
+  endoData()
+)
+```
+
+---
+
+# Passing data around
+
+
+```r
+# server.R
+
+merge_data &lt;- mod_merge_data_server(&quot;merge_data_ui_1&quot;, endo_data = endo_data)
+
+# module
+
+mod_merge_data_server &lt;- function(id, endo_data, path_data, load_prev){
+  moduleServer( id, function(input, output, session){
+    # ...
+
+    selectInput(session$ns(&quot;endoDate&quot;), &quot;Endoscopy date&quot;, 
+                           choices = names(endo_data()))
+}
+```
+
+---
+
 # Gitflow
 
 * This isn&#39;t Shiny specific but we try to adopt a clear approach to gitflow and GitHub
@@ -147,7 +190,90 @@ top:0em;right:1em;
 
 # {golem}
 
-&gt; {golem} is an opinionated framework for building production-grade shiny applications
+&gt; [{golem}](https://github.com/ThinkR-open/golem) is an opinionated framework for building production-grade shiny applications
+
+* In golem, all Shiny applications are packages
+* Packages make it easy to test, manage dependencies, and deploy
+
+
+```r
+# install.packages(&quot;remotes&quot;)
+remotes::install_github(&quot;CDU-data-science-team/cmhsDashboard&quot;)
+library(cmhsDashboard)
+run_app()
+```
+
+* This is magic!
+
+---
+
+# Golem is your new best friend
+
+* Golem includes lots of code to make writing Shiny applications and packages easier
+* {usethis}
+    * Licence
+    * Dependencies
+    * data/ folder
+    * Git
+* {testthat}
+* {golem}
+    * Favicons
+    * Add modules
+    * Deploy RStudio Connect/ Shiny server/ shinyapps/ Docker
+
+---
+
+# Package dependencies
+
+* Managed more easily because of packaging
+* Golem encourages, but doesn&#39;t mandate, making explicit function calls from packages
+
+
+```r
+df &lt;- data %&gt;%  
+  tidyr::unnest(question_type) %&gt;% 
+  dplyr::mutate(dplyr::across(all_of(question_type), as.numeric)) %&gt;% 
+  dplyr::left_join(category_table, join_lookup)
+```
+
+* This is again extremely useful for collaborating
+
+---
+
+# Golem YAML
+
+* It&#39;s early days for us with this but this is a very powerful and simple tool
+
+
+```r
+default:
+  golem_name: staffSurveyNew
+  golem_version: 0.0.0.9000
+  app_prod: no
+* where: github
+production:
+  app_prod: yes
+dev:
+  golem_wd: !expr here::here()
+```
+
+---
+
+# In the app
+
+
+```r
+where_am_i &lt;- get_golem_config(&quot;where&quot;)
+
+if(where_am_i == &quot;github&quot;){
+  
+  # do something
+} else {
+  
+  # do something else
+}
+```
+
 
 ---
 
