@@ -1,0 +1,302 @@
+
+<!-- saved from url=(0255)file:///C:/Users/zoe.turner2/Documents/WORKING/3.%20GitHub/CDUDataScienceTeam/presentations/2021-03-17%20NHS-R%20Communicating%20your%20Analysis%20with%20Clinicians%20and%20Managers/Communicating%20your%20analysis%20with%20clinicians%20and%20managers.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_003{font-family:"Calibri Light",serif;font-size:60.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_003{font-family:"Calibri Light",serif;font-size:60.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_004{font-family:"Calibri",serif;font-size:20.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_004{font-family:"Calibri",serif;font-size:20.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_005{font-family:"Calibri",serif;font-size:20.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_005{font-family:"Calibri",serif;font-size:20.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_002{font-family:"Calibri",serif;font-size:10.0px;color:rgb(48,112,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_002{font-family:"Calibri",serif;font-size:10.0px;color:rgb(48,112,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_006{font-family:"Calibri Light",serif;font-size:44.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_006{font-family:"Calibri Light",serif;font-size:44.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_007{font-family:Arial,serif;font-size:28.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_007{font-family:Arial,serif;font-size:28.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_008{font-family:"Calibri",serif;font-size:28.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_008{font-family:"Calibri",serif;font-size:28.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_009{font-family:"Calibri",serif;font-size:28.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_009{font-family:"Calibri",serif;font-size:28.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_010{font-family:Arial,serif;font-size:24.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_010{font-family:Arial,serif;font-size:24.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_011{font-family:"Calibri",serif;font-size:24.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_011{font-family:"Calibri",serif;font-size:24.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_043{font-family:"Calibri Bold",serif;font-size:24.1px;color:rgb(109,172,28);font-weight:bold;font-style:normal;text-decoration: underline}
+div.cls_043{font-family:"Calibri Bold",serif;font-size:24.1px;color:rgb(109,172,28);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_013{font-family:Arial,serif;font-size:24.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_013{font-family:Arial,serif;font-size:24.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_014{font-family:"Calibri",serif;font-size:24.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_014{font-family:"Calibri",serif;font-size:24.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_044{font-family:"Calibri Bold",serif;font-size:24.1px;color:rgb(109,172,28);font-weight:bold;font-style:normal;text-decoration: underline}
+div.cls_044{font-family:"Calibri Bold",serif;font-size:24.1px;color:rgb(109,172,28);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_012{font-family:"Calibri Bold",serif;font-size:24.1px;color:rgb(109,172,28);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_012{font-family:"Calibri Bold",serif;font-size:24.1px;color:rgb(109,172,28);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_016{font-family:"Calibri Bold",serif;font-size:28.0px;color:rgb(255,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_016{font-family:"Calibri Bold",serif;font-size:28.0px;color:rgb(255,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_017{font-family:"Calibri Bold",serif;font-size:28.0px;color:rgb(255,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_017{font-family:"Calibri Bold",serif;font-size:28.0px;color:rgb(255,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_045{font-family:"Calibri",serif;font-size:8.1px;color:rgb(109,172,28);font-weight:normal;font-style:normal;text-decoration: underline}
+div.cls_045{font-family:"Calibri",serif;font-size:8.1px;color:rgb(109,172,28);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_019{font-family:"Calibri Light",serif;font-size:44.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_019{font-family:"Calibri Light",serif;font-size:44.1px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_020{font-family:"Calibri Bold",serif;font-size:22.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_020{font-family:"Calibri Bold",serif;font-size:22.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_021{font-family:"Calibri Bold",serif;font-size:100.0px;color:rgb(255,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_021{font-family:"Calibri Bold",serif;font-size:100.0px;color:rgb(255,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_022{font-family:"Calibri Bold Italic",serif;font-size:22.0px;color:rgb(0,0,0);font-weight:bold;font-style:italic;text-decoration: none}
+div.cls_022{font-family:"Calibri Bold Italic",serif;font-size:22.0px;color:rgb(0,0,0);font-weight:bold;font-style:italic;text-decoration: none}
+span.cls_023{font-family:"Calibri Bold",serif;font-size:20.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_023{font-family:"Calibri Bold",serif;font-size:20.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_024{font-family:"Calibri Bold",serif;font-size:22.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_024{font-family:"Calibri Bold",serif;font-size:22.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_025{font-family:"Calibri",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_025{font-family:"Calibri",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_026{font-family:"Calibri Bold",serif;font-size:18.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_026{font-family:"Calibri Bold",serif;font-size:18.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_027{font-family:"Calibri Bold",serif;font-size:18.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_027{font-family:"Calibri Bold",serif;font-size:18.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_028{font-family:"Calibri",serif;font-size:18.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_028{font-family:"Calibri",serif;font-size:18.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_029{font-family:"Calibri Bold",serif;font-size:18.1px;color:rgb(255,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_029{font-family:"Calibri Bold",serif;font-size:18.1px;color:rgb(255,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_030{font-family:"Calibri",serif;font-size:10.0px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_030{font-family:"Calibri",serif;font-size:10.0px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_046{font-family:"Calibri",serif;font-size:10.0px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: underline}
+div.cls_046{font-family:"Calibri",serif;font-size:10.0px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_031{font-family:"Calibri Bold",serif;font-size:18.1px;color:rgb(0,175,80);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_031{font-family:"Calibri Bold",serif;font-size:18.1px;color:rgb(0,175,80);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_032{font-family:"Calibri",serif;font-size:16.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_032{font-family:"Calibri",serif;font-size:16.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_033{font-family:"Calibri",serif;font-size:16.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_033{font-family:"Calibri",serif;font-size:16.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_034{font-family:"Calibri",serif;font-size:18.1px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_034{font-family:"Calibri",serif;font-size:18.1px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_035{font-family:"Calibri",serif;font-size:18.1px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_035{font-family:"Calibri",serif;font-size:18.1px;color:rgb(255,255,255);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_036{font-family:"Calibri",serif;font-size:28.0px;color:rgb(255,192,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_036{font-family:"Calibri",serif;font-size:28.0px;color:rgb(255,192,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_037{font-family:"Calibri",serif;font-size:28.0px;color:rgb(0,175,80);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_037{font-family:"Calibri",serif;font-size:28.0px;color:rgb(0,175,80);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_038{font-family:"Calibri",serif;font-size:28.0px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_038{font-family:"Calibri",serif;font-size:28.0px;color:rgb(37,131,197);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_039{font-family:"Calibri",serif;font-size:28.0px;color:rgb(255,192,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_039{font-family:"Calibri",serif;font-size:28.0px;color:rgb(255,192,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_040{font-family:"Calibri Bold",serif;font-size:28.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_040{font-family:"Calibri Bold",serif;font-size:28.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_041{font-family:"Calibri Italic",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:italic;text-decoration: none}
+div.cls_041{font-family:"Calibri Italic",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:italic;text-decoration: none}
+span.cls_047{font-family:"Calibri",serif;font-size:18.1px;color:rgb(109,172,28);font-weight:normal;font-style:normal;text-decoration: underline}
+div.cls_047{font-family:"Calibri",serif;font-size:18.1px;color:rgb(109,172,28);font-weight:normal;font-style:normal;text-decoration: none}
+-->
+</style>
+<script type="text/javascript" src="file:///C:/Users/zoe.turner2/Documents/WORKING/3.%20GitHub/CDUDataScienceTeam/presentations/2021-03-17%20NHS-R%20Communicating%20your%20Analysis%20with%20Clinicians%20and%20Managers/fd452a50-b4cd-11eb-a980-0cc47a792c0a_id_fd452a50-b4cd-11eb-a980-0cc47a792c0a_files/wz_jsgraphics.js"></script>
+</head>
+<body>
+<div style="position:absolute;left:50%;margin-left:-480px;top:0px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background01.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:129.67px;top:132.15px" class="cls_003"><span class="cls_003">Communicating your analysis</span></div>
+<div style="position:absolute;left:134.95px;top:196.97px" class="cls_003"><span class="cls_003">with clinicians and managers</span></div>
+<div style="position:absolute;left:127.22px;top:283.54px" class="cls_004"><span class="cls_004">Andreas Soteriades, Data Scientist (CDU Data Science Team, Nottinghamshire</span></div>
+<div style="position:absolute;left:127.22px;top:305.18px" class="cls_005"><span class="cls_005">Healthcare NHS Foundation Trust)</span></div>
+<div style="position:absolute;left:127.22px;top:336.74px" class="cls_005"><span class="cls_005">NHS-R Community, 17/03/2021</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:550px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background02.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Machine Learning in Healthcare</span></div>
+<div style="position:absolute;left:73.20px;top:142.22px" class="cls_007"><span class="cls_007">•</span><span class="cls_008"> Machine Learning (ML) increasingly important in enabling critical</span></div>
+<div style="position:absolute;left:91.22px;top:172.44px" class="cls_009"><span class="cls_009">business decisions in healthcare</span></div>
+<div style="position:absolute;left:73.20px;top:212.81px" class="cls_007"><span class="cls_007">•</span><span class="cls_008"> Text Mining &amp; Natural Language Processing quite popular</span></div>
+<div style="position:absolute;left:109.22px;top:248.69px" class="cls_010"><span class="cls_010">•</span><span class="cls_011"> NIHR </span><a href="https://evidence.nihr.ac.uk/themedreview/improving-care-by-using-patient-feedback/">Improving Care by Using Patient Feedback</a> </div>
+<div style="position:absolute;left:109.22px;top:279.63px" class="cls_013"><span class="cls_013">•</span><span class="cls_014"> HDR UK </span><a href="https://www.hdruk.ac.uk/projects/national-text-analytics-project/">National Text Analytics Resource</a> </div>
+<div style="position:absolute;left:109.22px;top:310.63px" class="cls_010"><span class="cls_010">•</span><span class="cls_012"> </span><span class="cls_043">Our very own project</span><span class="cls_011"> (‘develop’ branch up to date)</span></div>
+<div style="position:absolute;left:73.20px;top:345.79px" class="cls_007"><span class="cls_007">•</span><span class="cls_008"> ML often seen as ‘black box’</span></div>
+<div style="position:absolute;left:253.27px;top:400.47px" class="cls_016"><span class="cls_016">How can we increase the confidence of</span></div>
+<div style="position:absolute;left:254.59px;top:434.11px" class="cls_017"><span class="cls_017">non-specialist top management in ML?</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:1100px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background03.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Rapid intro to Machine Learning</span></div>
+<div style="position:absolute;left:586.18px;top:469.27px" class="cls_045"><span class="cls_045"> </span><a href="https://playgro.com/">https://playgro.com/</a> </div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:1650px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background04.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:25.27px" class="cls_019"><span class="cls_019">Explaining complex ML models to the lay</span></div>
+<div style="position:absolute;left:73.20px;top:72.77px" class="cls_006"><span class="cls_006">audience</span></div>
+<div style="position:absolute;left:163.06px;top:251.69px" class="cls_020"><span class="cls_020">Explaining Random Forest…</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:2200px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background05.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:25.27px" class="cls_019"><span class="cls_019">Explaining complex ML models to the lay</span></div>
+<div style="position:absolute;left:73.20px;top:72.77px" class="cls_006"><span class="cls_006">audience</span></div>
+<div style="position:absolute;left:264.05px;top:127.61px" class="cls_021"><span class="cls_021">?</span></div>
+<div style="position:absolute;left:93.05px;top:251.69px" class="cls_020"><span class="cls_020">Do I </span><span class="cls_022">really</span><span class="cls_020"> need to explain Random Forest?</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:2750px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background06.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:25.27px" class="cls_019"><span class="cls_019">Explaining complex ML models to the lay</span></div>
+<div style="position:absolute;left:73.20px;top:72.77px" class="cls_006"><span class="cls_006">audience</span></div>
+<div style="position:absolute;left:608.78px;top:119.69px" class="cls_023"><span class="cls_023">Can I play tennis tomorrow?</span></div>
+<div style="position:absolute;left:264.05px;top:127.61px" class="cls_021"><span class="cls_021">?</span></div>
+<div style="position:absolute;left:93.05px;top:251.69px" class="cls_020"><span class="cls_020">Do I </span><span class="cls_022">really</span><span class="cls_020"> need to explain Random Forest?</span></div>
+<div style="position:absolute;left:90.89px;top:328.73px" class="cls_020"><span class="cls_020">Let’s better start with simple,</span></div>
+<div style="position:absolute;left:90.89px;top:355.11px" class="cls_024"><span class="cls_024">intuitive Decision Trees…</span></div>
+<div style="position:absolute;left:528.91px;top:446.11px" class="cls_025"><span class="cls_025">Image from: </span><a href="http://science.slc.edu/~jmarshall/courses/2005/fall/cs151/lectures/decision-trees/">http://science.slc.edu/~jmarshall/courses/2005/fall/cs151/lectures/decision-trees/</a> </div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:3300px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background07.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:25.27px" class="cls_019"><span class="cls_019">Explaining complex ML models to the lay</span></div>
+<div style="position:absolute;left:73.20px;top:72.77px" class="cls_006"><span class="cls_006">audience</span></div>
+<div style="position:absolute;left:608.78px;top:119.69px" class="cls_023"><span class="cls_023">Can I play tennis tomorrow?</span></div>
+<div style="position:absolute;left:264.05px;top:127.61px" class="cls_021"><span class="cls_021">?</span></div>
+<div style="position:absolute;left:93.05px;top:251.69px" class="cls_020"><span class="cls_020">Do I </span><span class="cls_022">really</span><span class="cls_020"> need to explain Random Forest?</span></div>
+<div style="position:absolute;left:90.89px;top:328.73px" class="cls_020"><span class="cls_020">Let’s better start with simple,</span></div>
+<div style="position:absolute;left:90.89px;top:355.11px" class="cls_024"><span class="cls_024">intuitive Decision Trees…</span></div>
+<div style="position:absolute;left:90.89px;top:381.55px" class="cls_020"><span class="cls_020">… and let’s leave it at that!</span></div>
+<div style="position:absolute;left:528.91px;top:446.11px" class="cls_025"><span class="cls_025">Image from: </span><a href="http://science.slc.edu/~jmarshall/courses/2005/fall/cs151/lectures/decision-trees/">http://science.slc.edu/~jmarshall/courses/2005/fall/cs151/lectures/decision-trees/</a> </div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:3850px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background08.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Class balancing</span></div>
+<div style="position:absolute;left:184.01px;top:124.68px" class="cls_026"><span class="cls_026">Training phase</span></div>
+<div style="position:absolute;left:611.35px;top:124.25px" class="cls_027"><span class="cls_027">Testing phase</span></div>
+<div style="position:absolute;left:593.50px;top:191.47px" class="cls_028"><span class="cls_028">Look! A </span><span class="cls_029">cat</span><span class="cls_028">!</span></div>
+<div style="position:absolute;left:104.02px;top:196.73px" class="cls_028"><span class="cls_028">Look! </span><span class="cls_026">Animals</span><span class="cls_028">!</span></div>
+<div style="position:absolute;left:540.60px;top:514.42px" class="cls_030"><span class="cls_030">Images retrieved from: </span><a href="https://www.vectorstock.com/royalty-free-vector/cute-baby-cat-cartoon-vector-1471677">vectorstock.com</a><span class="cls_030">; </span><a href="https://www.freepik.com/premium-vector/cute-tiger-cartoon_2502287.htm">freepik.com</a> <span class="cls_030">; </span><span class="cls_046">shapechef.com</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:4400px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background09.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Class balancing</span></div>
+<div style="position:absolute;left:184.01px;top:124.68px" class="cls_026"><span class="cls_026">Training phase</span></div>
+<div style="position:absolute;left:611.35px;top:124.25px" class="cls_027"><span class="cls_027">Testing phase</span></div>
+<div style="position:absolute;left:587.62px;top:191.47px" class="cls_028"><span class="cls_028">Look! A </span><span class="cls_031">tiger</span><span class="cls_028">!</span></div>
+<div style="position:absolute;left:104.02px;top:196.73px" class="cls_028"><span class="cls_028">Look! </span><span class="cls_026">Animals</span><span class="cls_028">!</span></div>
+<div style="position:absolute;left:540.60px;top:514.42px" class="cls_030"><span class="cls_030">Images retrieved from: </span><a href="https://www.vectorstock.com/royalty-free-vector/cute-baby-cat-cartoon-vector-1471677">vectorstock.com</a><span class="cls_030">; </span><a href="https://www.freepik.com/premium-vector/cute-tiger-cartoon_2502287.htm">freepik.com</a> <span class="cls_030">; </span><span class="cls_046">shapechef.com</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:4950px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background10.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Class balancing</span></div>
+<div style="position:absolute;left:184.01px;top:124.68px" class="cls_026"><span class="cls_026">Training phase</span></div>
+<div style="position:absolute;left:611.35px;top:124.25px" class="cls_027"><span class="cls_027">Testing phase</span></div>
+<div style="position:absolute;left:587.62px;top:191.47px" class="cls_028"><span class="cls_028">Look! A </span><span class="cls_031">tiger</span><span class="cls_028">!</span></div>
+<div style="position:absolute;left:104.02px;top:196.73px" class="cls_028"><span class="cls_028">Look! </span><span class="cls_026">Animals</span><span class="cls_028">!</span></div>
+<div style="position:absolute;left:540.60px;top:514.42px" class="cls_030"><span class="cls_030">Images retrieved from: </span><a href="https://www.vectorstock.com/royalty-free-vector/cute-baby-cat-cartoon-vector-1471677">vectorstock.com</a><span class="cls_030">; </span><a href="https://www.freepik.com/premium-vector/cute-tiger-cartoon_2502287.htm">freepik.com</a> <span class="cls_030">; </span><span class="cls_046">shapechef.com</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:5500px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background11.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Hyperparameter tuning</span></div>
+<div style="position:absolute;left:206.14px;top:127.06px" class="cls_026"><span class="cls_026">The Challenge: find optimal bass and treble settings for all of my albums!</span></div>
+<div style="position:absolute;left:168.86px;top:177.79px" class="cls_026"><span class="cls_026">Training phase</span></div>
+<div style="position:absolute;left:643.58px;top:177.79px" class="cls_026"><span class="cls_026">Testing phase</span></div>
+<div style="position:absolute;left:184.03px;top:207.62px" class="cls_032"><span class="cls_032">Like a Virgin</span></div>
+<div style="position:absolute;left:650.93px;top:207.62px" class="cls_032"><span class="cls_032">Sticky Fingers</span></div>
+<div style="position:absolute;left:649.10px;top:461.11px" class="cls_032"><span class="cls_032">Sounds awful!</span></div>
+<div style="position:absolute;left:168.24px;top:464.09px" class="cls_032"><span class="cls_032">Bass: 9; Treble: 8</span></div>
+<div style="position:absolute;left:668.52px;top:514.01px" class="cls_030"><span class="cls_030">Image retrieved from: </span><a href="http://clipground.com/music-player-clipart.html">clipground.com</a> </div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:6050px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background12.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Hyperparameter tuning</span></div>
+<div style="position:absolute;left:206.14px;top:127.06px" class="cls_026"><span class="cls_026">The Challenge: find optimal bass and treble settings for all of my albums!</span></div>
+<div style="position:absolute;left:168.86px;top:177.79px" class="cls_026"><span class="cls_026">Training phase</span></div>
+<div style="position:absolute;left:83.06px;top:207.62px" class="cls_032"><span class="cls_032">Let it be</span></div>
+<div style="position:absolute;left:184.03px;top:207.62px" class="cls_032"><span class="cls_032">Like a Virgin</span></div>
+<div style="position:absolute;left:309.74px;top:208.28px" class="cls_033"><span class="cls_033">Kind of Blue</span></div>
+<div style="position:absolute;left:292.15px;top:444.89px" class="cls_032"><span class="cls_032">Bass: 4; Treble: 4</span></div>
+<div style="position:absolute;left:27.86px;top:447.79px" class="cls_032"><span class="cls_032">Bass: 5; Treble: 3</span></div>
+<div style="position:absolute;left:168.24px;top:464.09px" class="cls_032"><span class="cls_032">Bass: 9; Treble: 8</span></div>
+<div style="position:absolute;left:668.52px;top:514.01px" class="cls_030"><span class="cls_030">Image retrieved from: </span><a href="http://clipground.com/music-player-clipart.html">clipground.com</a> </div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:6600px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background13.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Hyperparameter tuning</span></div>
+<div style="position:absolute;left:206.14px;top:127.06px" class="cls_026"><span class="cls_026">The Challenge: find optimal bass and treble settings for all of my albums!</span></div>
+<div style="position:absolute;left:168.86px;top:177.79px" class="cls_026"><span class="cls_026">Training phase</span></div>
+<div style="position:absolute;left:644.30px;top:177.79px" class="cls_026"><span class="cls_026">Testing phase</span></div>
+<div style="position:absolute;left:83.06px;top:207.62px" class="cls_032"><span class="cls_032">Let it be</span></div>
+<div style="position:absolute;left:184.03px;top:207.62px" class="cls_032"><span class="cls_032">Like a Virgin</span></div>
+<div style="position:absolute;left:309.74px;top:208.28px" class="cls_033"><span class="cls_033">Kind of Blue</span></div>
+<div style="position:absolute;left:650.93px;top:207.62px" class="cls_032"><span class="cls_032">Sticky Fingers</span></div>
+<div style="position:absolute;left:458.76px;top:291.60px" class="cls_034"><span class="cls_034">Optimal</span></div>
+<div style="position:absolute;left:459.48px;top:313.25px" class="cls_035"><span class="cls_035">settings</span></div>
+<div style="position:absolute;left:444.84px;top:334.85px" class="cls_035"><span class="cls_035">somewhere</span></div>
+<div style="position:absolute;left:435.00px;top:356.45px" class="cls_035"><span class="cls_035">‘in the middle’</span></div>
+<div style="position:absolute;left:292.15px;top:444.89px" class="cls_032"><span class="cls_032">Bass: 4; Treble: 4</span></div>
+<div style="position:absolute;left:27.86px;top:447.79px" class="cls_032"><span class="cls_032">Bass: 5; Treble: 3</span></div>
+<div style="position:absolute;left:651.19px;top:461.11px" class="cls_032"><span class="cls_032">Sounds great!</span></div>
+<div style="position:absolute;left:168.24px;top:464.09px" class="cls_032"><span class="cls_032">Bass: 9; Treble: 8</span></div>
+<div style="position:absolute;left:668.52px;top:514.01px" class="cls_030"><span class="cls_030">Image retrieved from: </span><a href="http://clipground.com/music-player-clipart.html">clipground.com</a> </div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:7150px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background14.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Other examples</span></div>
+<div style="position:absolute;left:73.20px;top:142.22px" class="cls_008"><span class="cls_008">Which type of petrol (</span><span class="cls_036">hyperparameter</span><span class="cls_008">) makes my car (</span><span class="cls_037">model</span><span class="cls_008">) run more</span></div>
+<div style="position:absolute;left:73.20px;top:172.44px" class="cls_009"><span class="cls_009">efficiently (</span><span class="cls_038">optimization task</span><span class="cls_009">)?</span></div>
+<div style="position:absolute;left:73.20px;top:253.01px" class="cls_008"><span class="cls_008">Which builder (</span><span class="cls_037">model</span><span class="cls_008">), and using which tool/combination of tools</span></div>
+<div style="position:absolute;left:73.20px;top:283.23px" class="cls_009"><span class="cls_009">(</span><span class="cls_039">hyperparameters</span><span class="cls_009">), will build me the perfect loft (</span><span class="cls_038">optimization task</span><span class="cls_009">)?</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:7700px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background15.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Involve top management in modelling process</span></div>
+<div style="position:absolute;left:348.22px;top:168.19px" class="cls_040"><span class="cls_040">Cost-sensitive Learning</span></div>
+<div style="position:absolute;left:443.23px;top:316.30px" class="cls_025"><span class="cls_025">Elkan (2001). </span><span class="cls_041">Proceedings of the Seventeenth IJCAI</span><span class="cls_025">.</span></div>
+<div style="position:absolute;left:443.23px;top:325.90px" class="cls_025"><span class="cls_025">At: </span><a href="https://cseweb.ucsd.edu/~elkan/rescale.pdf">https://cseweb.ucsd.edu/~elkan/rescale.pdf</a> </div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:8250px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background16.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:73.20px;top:49.01px" class="cls_006"><span class="cls_006">Recommendations</span></div>
+<div style="position:absolute;left:73.20px;top:142.22px" class="cls_007"><span class="cls_007">•</span><span class="cls_008"> Don’t talk about models and methods in detail- it’s not necessary</span></div>
+<div style="position:absolute;left:73.20px;top:182.57px" class="cls_007"><span class="cls_007">•</span><span class="cls_008"> The point is for top management to see the value of ML in decision-</span></div>
+<div style="position:absolute;left:91.22px;top:212.81px" class="cls_008"><span class="cls_008">making</span></div>
+<div style="position:absolute;left:73.20px;top:253.01px" class="cls_007"><span class="cls_007">•</span><span class="cls_008"> Use language that is relevant to the audience</span></div>
+<div style="position:absolute;left:73.20px;top:293.23px" class="cls_007"><span class="cls_007">•</span><span class="cls_008"> Help your audience by using examples from everyday life they can</span></div>
+<div style="position:absolute;left:91.22px;top:323.47px" class="cls_008"><span class="cls_008">understand/identify with</span></div>
+<div style="position:absolute;left:73.20px;top:363.79px" class="cls_007"><span class="cls_007">•</span><span class="cls_008"> Seek ways to more actively involve top management in the model-</span></div>
+<div style="position:absolute;left:91.22px;top:394.01px" class="cls_009"><span class="cls_009">building process</span></div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-480px;top:8800px;width:960px;height:540px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="./Communicating your analysis with clinicians and managers_files/background17.jpg" width="960" height="540"></div>
+<div style="position:absolute;left:381.82px;top:49.01px" class="cls_006"><span class="cls_006">Thank you!</span></div>
+<div style="position:absolute;left:415.18px;top:222.77px" class="cls_040"><span class="cls_040">Questions?</span></div>
+<div style="position:absolute;left:314.14px;top:303.31px" class="cls_008"><span class="cls_008">CDU Data Science Team Blog:</span></div>
+<div style="position:absolute;left:284.66px;top:337.94px" class="cls_047"><span class="cls_047"> </span><a href="https://cdu-data-science-team.github.io/team-blog/">https://cdu-data-science-team.github.io/team-blog/</a> </div>
+<div style="position:absolute;left:449.69px;top:527.52px" class="cls_002"><span class="cls_002">Unclassified</span></div>
+</div>
+
+
+
+</body></html>
