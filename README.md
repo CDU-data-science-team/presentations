@@ -1,13 +1,17 @@
-# Presentations from the CDU Data Science Team
+# Presentations from the Clinical Development Unit Data Science Team
 
-## Roadmap
+## Information
 
-As shared in the [Understanding Your Data](https://cdu-data-science-team.github.io/team-blog/uyd.html) meetings and on the [blog site](https://cdu-data-science-team.github.io/team-blog/).
+Each folder in this repository contains the presentation and corresponding images or documents. Every folder will contain its own README with information on the presentation.
 
-https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1
+## Formats
 
-<!-- <iframe src="https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1" width="600" height="400" loading="lazy" allowfullscreen></iframe> <script>fitvids('.shareagain', {players: 'iframe'});</script> -->
+Where possible, presentations will be built from the [xaringan presentation template](https://github.com/CDU-data-science-team/presentation-template) and rendered in html formats to allow for accessibility. 
 
-## Productionising Shiny
+Where presentations have been produced in Powerpoint these will be made available in pdf formats.
 
-[https://cdu-data-science-team.github.io/presentations/shiny_in_production](https://cdu-data-science-team.github.io/presentations/shiny_in_production)
+## Folder naming
+
+The convention will be to put the presentation date followed by the presentation name, for example:
+
+<kbd> 2021-05-14 My Presentation </kbd>
