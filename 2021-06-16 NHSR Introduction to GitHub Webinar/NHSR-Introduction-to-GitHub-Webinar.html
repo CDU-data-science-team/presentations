@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>NHS-R Community Introduction to GitHub webinar</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Zoë Turner" />
+    <meta name="date" content="2021-06-16" />
+    <script src="libs/header-attrs-2.8/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon-1.4.1/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain-0.2.4/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain-0.2.4/shareagain.js"></script>
+    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/nhsr.css" type="text/css" />
+    <link rel="stylesheet" href="css/nhsr-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, left, bottom
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 300px;
+height: 200px;
+z-index: 0;
+background-image: url(img/nottshc.PNG);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:0em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide-logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+# NHS-R Community Introduction to GitHub webinar
+----
+## **An introduction before the introduction**
+### Zoë Turner | 16 June 2021
+&lt;/br&gt;
+
+---
+class: inverse, middle, center
+
+
+# What this talk will NOT cover...
+
+How to set up an account
+
+--
+
+not that much about version control either
+
+--
+
+it's not going to be all that technical... 
+
+---
+
+class: inverse-white, middle, center
+
+# What is GitHub?
+
+### "The code is on my Github repo"
+
+![Alt text: David from Schitt's Creek saying, "Oh God, Umm, What's th-, What's that?"](https://media.giphy.com/media/1zgOBEmZk2M8vSJxqD/giphy.gif)
+
+---
+
+# Who uses this (or should do)
+
+* Analysts
+* Data Scientists
+* Academics
+* [Teams](https://github.com/CDU-data-science-team)
+* [Organisations](https://github.com/nhs-r-community)
+
+--
+
+# What does not go into it (or shouldn't do)?
+
+* Large files
+* Passwords
+* Outputs (sometimes)
+* Anything patient identifiable 
+
+---
+
+class: inverse-white
+
+## This is what a new account looks like
+
+&lt;a href="https://github.com/Letxuga007" target="_blank"&gt;&lt;img alt="Picture of my training GitHub account with little activity"  src="img/github-front-page.PNG"/&gt;&lt;/a&gt;
+
+---
+
+class: inverse-white
+
+## This is what it could look like
+
+&lt;a href="https://github.com/Lextuga007" target="_blank"&gt;&lt;img alt="Picture of my active GitHub with lots of the functionality used" src="img/active-github.PNG"/&gt;&lt;/a&gt;
+
+---
+
+class: inverse, middle, center
+
+# Looking for something?
+
+---
+
+class: inverse-white
+
+# Searching GitHub
+
+### By user/organisation
+
+On an account repositories can be searched here:
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt3[
+![Image of the repository search box](img/repo-search.PNG)
+]
+
+---
+
+class: inverse-white
+
+# Searching GitHub
+
+### Global search
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt3[
+![Image of the global search in GitHub](img/global-search.PNG)
+]
+
+---
+
+### Search for NHS Number
+
+Prompts to define by the user/organisation or in the whole of GitHub
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt5[
+![Image of search of the words NHS Number](img/search-nhsnumber.PNG)
+]
+
+---
+
+class: inverse-white
+
+### And this is what you get
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt2[
+![Screenshot of NHS Number search in all GitHub](img/all-github-nhsnumber.PNG)
+]
+
+---
+class: inverse-white
+
+## Like all searches...
+
+Beware of spaces. 
+
+"NHS Number" gets 2 repositories for R but "NHSNumber" with no space gets 3 different and perhaps more useful repos
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt2[
+![Screenshot of NHSNumber search in GitHub](img/nhsnumber-r-search.PNG)
+]
+
+---
+
+class: inverse, middle, center
+
+# From the beginning 
+
+---
+
+# Start with finding a user
+
+Looking for my own repository Lextugao007
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/_I-TqT6R810" title="Finding a user on GitHub without logging in" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+# Filter repositories
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt5[
+![Image of the repository drop down](img/whats-in-github.PNG)
+]
+---
+
+class: inverse, middle, center
+
+# Other terminology
+
+---
+
+class: inverse-white
+
+# Other terminology
+
+#### related to copying a repository
+
+.green[Fork] - appears on my GitHub and I can make changes to that copy
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt2[
+![Screenshot of repos that have been forked](img/forked-repos.PNG)
+]
+
+---
+
+# Other terminology
+
+#### related to copying a repository
+
+.green[Clones] - doesn't appear on my GitHub and I can't make changes to the original without permission
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt2[
+![Image of error when pushing changes to a repo that's only cloned](img/cloned-but-no-permissions.PNG)
+]
+
+---
+
+class: inverse, middle, center
+
+# The importance of having a README
+
+---
+
+class:inverse-white
+
+# It's like a greeting to your repository
+
+Or like the cover of a book - what is in here, why is it here, what was I thinking?
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt2[
+&lt;a href="https://github.com/CDU-data-science-team/nottshcPublic" target="_blank"&gt;&lt;img alt="Screenshot of a README file" src="img/readme.PNG"/&gt;&lt;/a&gt;
+]
+---
+
+class: inverse-white
+
+# It might even be the book
+
+A repository of READMEs
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt2[
+&lt;a href="https://github.com/matiassingers/awesome-readme" target="_blank"&gt;&lt;img alt="Screenshot of a readme about awesome readmes"  src="img/readme-of-readmes.PNG"/&gt;&lt;/a&gt;
+]
+
+---
+
+class: inverse, middle, center
+
+# A place for code notes
+
+---
+
+# Gist (or quick code)
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/hxSekESQEvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+class: inverse, middle, center
+
+# Licence to copy
+
+---
+
+# Is the repository open sourced?
+
+Possible to check from the all listed repository view
+
+.b--black.ba.bw1.br2.shadow-5.ph4.m2[
+![Screenshot of a couple of repos with the licence highlighted](img/all-repos-view-licence.PNG)
+]
+
+---
+
+class: inverse-white
+
+# Is the repository open sourced?
+
+And in a couple of places within individual repositories
+
+.b--black.ba.bw1.br2.shadow-5.ph4.m2[
+![Screenshot of repository with README file and link highlighted](img/individual-repo-licence.PNG)
+]
+
+---
+
+class: inverse-white
+
+# Individual repositories
+
+Also look at the tags and the About, where people put links
+
+.b--black.ba.bw1.br2.shadow-5.ph4.m2[
+![Screenshot of repository with About and tags highlighted](img/about-and-tags.PNG)
+]
+
+---
+
+class: inverse, center, middle
+
+# Chapters of change
+
+---
+
+class: inverse-white
+
+# Branches
+
+Main (Master is the old name) is the default code
+
+.b--black.ba.bw1.br2.shadow-5.ph4.m2[
+![Screenshot with branches and the link highlighted](img/branches.PNG)
+]
+
+---
+
+class: inverse-white
+
+# Branches are closely linked to issues
+
+.b--black.ba.bw1.br2.shadow-5.ph4.m2[
+![Screenshot of issues](img/issues.PNG)
+]
+
+---
+
+# Which may be linked to branch names
+
+Convention may to use the issue number in the branch name:
+
+.b--black.ba.bw1.br2.shadow-5.ph4.m2[
+![Screenshot of branches with issues in name](img/branches-issues-link.PNG)
+]
+
+---
+
+class: inverse, center, middle
+
+# Open source 'chatting'
+
+---
+
+class: inverse-white
+
+# Issues or conversations?
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt5[
+&lt;a href="https://github.com/opensafely/risk-factors-research/issues/68" target="_blank"&gt;&lt;img alt="Screenshot of OpenSafely issue 68 about ethnicity codes"  src="img/issue-open-conversation.PNG"/&gt;&lt;/a&gt;
+]
+
+---
+
+class: inverse-white
+
+# Issues or conversations?
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt5[
+&lt;a href="https://github.com/r-dbi/odbc/issues/86" target="_blank"&gt;&lt;img alt="Screenshot of odbc issue 86 about SQL nvarchar(max) import errors"  src="img/odbc-issue.PNG"/&gt;&lt;/a&gt;
+]
+
+---
+
+class: inverse, center, middle
+
+# Downloading files
+
+---
+
+# 3 different ways to download files
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/-7yEJd99NiU" title="3 ways to download data from GitHub" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+class: inverse, center, middle
+
+# Free webpage publishing
+
+---
+
+# GitHub published webpages
+
+If GitHub pages have been switched on it's possible to read html files...
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Sd0nGBpDA_k" title="Finding an html rendered GitHub" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+class:inverse-white
+
+# Publish a blog through GitHub
+
+Using {distill} blogs and articles can be published (free) through GitHub
+
+.b--black.ba.bw1.br2.shadow-5.ph4.mt5[
+&lt;a href="https://cdu-data-science-team.github.io/team-blog/" target="_blank"&gt;&lt;img alt="Screenshot of the CDU Data Science Team's distill blog"  src="img/distill-blog-github.PNG"/&gt;&lt;/a&gt;
+]
+
+
+---
+
+class: center, middle
+
+![Moira from Schitt's Creek saying "Okay we can stop it there for today"](https://media.giphy.com/media/604f8OZyjjYEp5ULXY/giphy.gif)
+
+---
+
+class: inverse, middle, center
+
+# Any questions
+
+Thanks to NHS-R Community for hosting these webinars
+
+![Slightly moving GitHub octocat symbol with wavy edges](https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "googlecode",
+"highlightLines": true,
+"highlightLanguage": "r",
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
