@@ -15,3 +15,9 @@ Where presentations have been produced in Powerpoint these will be made availabl
 The convention will be to put the presentation date followed by the presentation name, for example:
 
 <kbd> 2021-05-14 My Presentation </kbd>
+
+## Really useful links
+
+If a presentation is referred to elsewhere details should be put here for easier reference to update if necessary:
+
+[CDU Data Science Team Roadmap](https://github.com/CDU-data-science-team/team-blog/blob/main/_site.yml) 
