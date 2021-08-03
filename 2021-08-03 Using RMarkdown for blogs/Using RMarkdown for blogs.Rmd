@@ -1,0 +1,242 @@
+---
+title: "CDU Data Science Team &mdash; slides"
+subtitle: "Branded slides in R"
+author: "Zoë Turner"
+institute: "Nottinghamshire Healthcare NHS Foundation Trust"
+date: "August 2021" 
+output:
+  xaringan::moon_reader:
+    includes: 
+      after_body: 
+        - insert-logo.html
+    css: 
+      - default
+      - css/nhsr.css
+      - css/nhsr-fonts.css
+    lib_dir: libs
+    seal: false
+    self_contained: true
+    nature:
+      highlightStyle: googlecode
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+class: title-slide, left, bottom
+
+```{r setup, include = FALSE}
+library(knitr)
+library(tidyverse)
+
+### Packages not on CRAN ###
+
+# install.packages("remotes")
+# remotes::install_github("mitchelloharawild/icon")
+library(icon) # icons need to be loaded to view so run following code if not already done
+# icon::download_fontawesome()
+
+# install.packages("devtools")
+#devtools::install_github("gadenbuie/xaringanExtra")
+library(xaringanExtra)
+xaringanExtra::use_share_again() # need to get the slide button on html view
+
+# install.packages("devtools")
+# devtools::install_github('nhs-r-community/nhsrtheme')
+library(nhsrtheme)
+
+
+# set default options
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300,
+               dev.args = list(type = "cairo"),
+               eval = TRUE,
+               warning = FALSE,
+               message = FALSE,
+               error = FALSE)
+
+# uncomment the following lines if you want to use the NHS-R theme colours by default
+# scale_fill_continuous <- partial(scale_fill_nhs, discrete = FALSE)
+# scale_fill_discrete <- partial(scale_fill_nhs, discrete = TRUE)
+# scale_colour_continuous <- partial(scale_colour_nhs, discrete = FALSE)
+# scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
+
+```
+
+```{r echo=FALSE}
+# Adds logo to all slides
+
+xaringanExtra::use_logo(
+  image_url = "https://cdu-data-science-team.github.io/assets//logo/nottshc-logo.jpg",
+  exclude_class = c("inverse", "hide-logo"),
+  width = "300px",
+  height = "200px",
+  position = css_position(top = "0em", right = "1em")
+)
+```
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author` | `r rmarkdown::metadata$date`
+</br>
+</br>
+</br>
+</br>
+
+---
+
+class: inverse, middle, center
+
+# Rmarkdown
+
+## more than a (powerful) report maker
+
+
+---
+class: middle, center
+
+# How I started
+
+### NHS-R Community Training
+
+When NHS-R Community 'started' I was told:
+
+--
+
+If you use more code than text use a script
+
+--
+
+If you write more text than code use RMarkdown
+
+--
+
+# Soon changed to...
+
+Use RMarkdown all the time
+
+  for coding
+  <br> for reports
+
+---
+
+class: inverse, center, middle
+
+
+[![Buzz Lightyear and Woody with Buzz looking into the distance with his arm outstretched saying "RMarkdown, RMarkdown everywhere"](img/toy-story-meme-rmarkdown.png)](http://cmcr-class.rbind.io/blog/2019/01/22/rmarkdown-everywhere/)
+
+---
+
+# RMarkdown can be used for
+
+ - presentation slides (interactive xaringanExtra::scribble())
+ - blogs
+ - [training](https://nhs-r-community.github.io/intro_r/) 
+ - [interactive apps](https://regionh.shinyapps.io/hais/) (like Shiny called Flexdashboards)
+ 
+--
+
+# RMarkdown is not just R
+
+Crucially, and I never realised this even when using them, it combines languages. I've used:
+
+ * R
+ * SQL
+ * HTML
+ * CSS
+ * Markup Language
+ * Markdown
+
+---
+
+# Which leads me to blogs
+
+## Why blog?
+
+Started with submitting blogs to [NHS-R Community](https://nhsrcommunity.com/authors/) amongst other established blogging NHS analysts
+
+* some technical
+* some wordy
+
+--
+
+# You should have your own website
+
+---
+
+class: center, middle
+
+![Black man shaking his head saying "I don't even know where to start"](https://media.giphy.com/media/8VIRj0jsCPIIBpKSDK/giphy.gif)
+
+--
+
+# Lucky to look at the right time because...
+
+---
+
+class: inverse-white, center, middle
+
+[![Alison Hill's website for materials to introduce yourself online including {distill}, Hugo Apéro and {postcard}](img/introducing-yourself-online.PNG)](https://iyo-rstudio-global.netlify.app/)
+
+---
+
+# That got me well and truly started
+
+[![Hugo Apéro blogs showcased by Alison Hill with pictures from my Ethics Committee site and my profile picture for my own site. Sandwiched between is the introduction yourself online website linked to in the previous slide.](img/hugo-apero-blogs.PNG)](https://hugo-apero-docs.netlify.app/project/)
+
+---
+
+class: inverse-white, center, middle
+
+# Team blog
+
+[![CDU Data Science team blog site picture](img/cdu-data-science-team-blog.PNG)](https://cdu-data-science-team.github.io/team-blog/)
+
+???
+A site to share
+
+- methodology
+- learnings
+- principles
+
+---
+
+class: inverse-white, center, middle
+
+# Understanding Your Data
+
+[![Understanding your data site picture](img/understanding-your-data-blog-site.PNG)](https://cdu-data-science-team.github.io/understanding-your-data/)
+
+???
+Share publicly
+
+- How we set up the meeting
+- What we discussed
+- What we aim to do
+
+---
+
+# Benefits of distill
+
+* Pages can be published free through GitHub
+* Comprehensive support pages from [RStudio](https://rstudio.github.io/distill/)
+* Easy to see how others have created pages as code is open and shared
+
+---
+
+class: inverse
+
+name: acknowledgement
+
+# Acknowledgments
+
+Acknowledgements: the professional look of this presentation, using NHS and Nottinghamshire Healthcare NHS Foundation Trust colour branding, exists because of the amazing work of Silvia Canelón, details of the workshops she ran at the [NHS-R Community conference](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html).
+
+[`r icon::fontawesome("twitter")` @DataScienceNott](https://twitter.com/DataScienceNott)<br/>
+[`r icon::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)<br/>
+[`r icon::fontawesome("paper-plane")` zoe.turner2@notthshc.nhs.uk](mailto:zoe.turner2@nottshc.nhs.uk)
+
