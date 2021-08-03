@@ -1,6 +1,6 @@
 ---
-title: "CDU Data Science Team &mdash; slides"
-subtitle: "Branded slides in R"
+title: "CDU Data Science Team &mdash; RMarkdown for blogs"
+subtitle: "how to use RMarkdown beyond reports (notably for blogging)"
 author: "Zoë Turner"
 institute: "Nottinghamshire Healthcare NHS Foundation Trust"
 date: "August 2021" 
