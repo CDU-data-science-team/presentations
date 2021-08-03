@@ -119,8 +119,7 @@ If you write more text than code use RMarkdown
 
 Use RMarkdown all the time
 
-  for coding
-  <br> for reports
+  for coding and reports
 
 ---
 
@@ -225,6 +224,14 @@ Share publicly
 * Pages can be published free through GitHub
 * Comprehensive support pages from [RStudio](https://rstudio.github.io/distill/)
 * Easy to see how others have created pages as code is open and shared
+* Clean layout that is a standard for scientific writing
+
+# Benefits of Hugo Apéro 
+
+* Incredibly flexible and can be much more than a blog site
+* The [template](https://github.com/hugo-apero/hugo-apero) is a nice way of setting up a site with minimal effort
+* Also easy to see how others have created pages as code is open and shared
+* Can be hosted free through services like [Netlify](https://www.netlify.com/)
 
 ---
 
