@@ -41,6 +41,7 @@ library(icon) # icons need to be loaded to view so run following code if not alr
 #devtools::install_github("gadenbuie/xaringanExtra")
 library(xaringanExtra)
 xaringanExtra::use_share_again() # need to get the slide button on html view
+xaringanExtra::use_scribble()
 
 # install.packages("devtools")
 # devtools::install_github('nhs-r-community/nhsrtheme')
