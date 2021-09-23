@@ -132,7 +132,7 @@ xaringanExtra::use_logo(
 
 * Modules allow you to reuse Shiny code
 
-<iframe src="https://involve.nottshc.nhs.uk:8443/experiencesdashboard/" width="1000" height="400"></iframe>
+<iframe src="https://involve.nottshc.nhs.uk/rsconnect/experience_a/" width="1000" height="400"></iframe>
 
 ---
 
