@@ -2,6 +2,13 @@
 * Chris Beeley
 * 9th November 2021
 
+<!---
+Please note the following rather convoluted terminal command to render this talk to Beamer pdf
+
+pandoc -f gfm 2021-11-09_Pharmacy_forecasting/presentation.md -o 2021-11-09_Pharmacy_forecasting/presentation.pdf -w beamer --pdf-engine=xelatex -V mainfont="DejaVu Sans"
+
+-->
+
 # Tasks
 
 - Database access
