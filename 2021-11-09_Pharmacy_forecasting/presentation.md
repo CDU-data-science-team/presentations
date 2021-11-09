@@ -68,6 +68,7 @@ forecast_series <- function(data, horizon, frequency = "Daily"){
 - Don't email a load of code files around!
 - Package and document your code
 - Goldilocks functions- not too big, not too small
+- [https://github.com/CDU-data-science-team/phaRmacyForecasting](https://github.com/CDU-data-science-team/phaRmacyForecasting)
 
 <!---
 Please note the following rather convoluted terminal command to render this talk to Beamer pdf
