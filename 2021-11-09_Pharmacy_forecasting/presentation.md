@@ -2,6 +2,12 @@
 % Chris Beeley
 % 9th November 2021
 
+## Introduction
+
+- Plumbing
+- No one person understands the whole project
+- Team work as open source code
+
 ## Tasks
 
 - Database access
@@ -66,6 +72,6 @@ forecast_series <- function(data, horizon, frequency = "Daily"){
 <!---
 Please note the following rather convoluted terminal command to render this talk to Beamer pdf
 
-pandoc -f gfm 2021-11-09_Pharmacy_forecasting/presentation.md -o 2021-11-09_Pharmacy_forecasting/presentation.pdf -w beamer --pdf-engine=xelatex -V mainfont="DejaVu Sans"
+pandoc 2021-11-09_Pharmacy_forecasting/presentation.md -o 2021-11-09_Pharmacy_forecasting/presentation.pdf -w beamer --pdf-engine=xelatex -V mainfont="DejaVu Sans"
 
 -->
