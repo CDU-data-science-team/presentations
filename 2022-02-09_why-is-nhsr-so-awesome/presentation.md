@@ -54,7 +54,7 @@
 * We build stuff together because we believe in the value of the community
 
 \includegraphics[width=0.6\textwidth]{2022-02-09_why-is-nhsr-so-awesome/git_repos.png}
-\includegraphics[width=0.4\textwidth]{2022-02-09_why-is-nhsr-so-awesome/git_contributors.png}
+\includegraphics[width=0.35\textwidth]{2022-02-09_why-is-nhsr-so-awesome/git_contributors.png}
 
 ## Force multiplier
 
