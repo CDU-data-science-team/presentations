@@ -8,15 +8,6 @@
 * I swore that I’d make sure that others didn’t suffer like I did
 * NHS-R is the fulfilment of this promise
 
-## Core values
-
-* Flat hierarchy
-* Sharing
-* Cooperate across organisational boundaries
-* We cooperate across international boundaries
-* We love beginners
-* We make mistakes and learn together
-
 ## Core values of open source
 
 * Transparency
@@ -25,6 +16,15 @@
 * Inclusive meritocracy
 * Community
 * Work across organisational boundaries (obviously)
+
+## Core values
+
+* Flat hierarchy
+* Sharing
+* Cooperate across organisational boundaries
+* We cooperate across international boundaries
+* We love beginners
+* We make mistakes and learn together
 
 ## What is NHS-R?
 
@@ -37,6 +37,34 @@
 * “Computer (department) says no”
 
 ## What's the recipe?
+
+* Senior fellows:
+    * Statistics
+    * Machine learning
+    * Academia
+    * Open source
+    * Teaching
+* Community driven
+
+## Open source
+
+* We believe in open source
+* All NHS R solutions are open source
+* We teach git and GitHub and encourage organisations to share their code
+* We build stuff together because we believe in the value of the community
+
+\includegraphics[width=0.6\textwidth]{2022-02-09_why-is-nhsr-so-awesome/git_repos.png}
+\includegraphics[width=0.4\textwidth]{2022-02-09_why-is-nhsr-so-awesome/git_contributors.png}
+
+## Force multiplier
+
+* Code is a force multiplier
+* Wickham, 2014 https://bit.ly/3jQ5SuJ
+* So is a community
+* NHS-R is absurdly cheap and its ROI is absurdly high
+* NHS-R is making people happy and productive
+* NHS-R is changing the lives of its members and improving healthcare for everyone in the UK
+
 
 <!---
 Please note the following rather convoluted terminal command to render this talk to Beamer pdf
