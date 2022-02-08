@@ -56,6 +56,26 @@
 \includegraphics[width=0.6\textwidth]{2022-02-09_why-is-nhsr-so-awesome/git_repos.png}
 \includegraphics[width=0.35\textwidth]{2022-02-09_why-is-nhsr-so-awesome/git_contributors.png}
 
+## The best things in life are free...?
+
+* Slack - cost £0
+* Mentoring - cost £0
+* Book club - cost £0
+* Podcast - cost £0
+* NHSRplotthedots - cost £0
+
+## But you can keep them for the birds and bees...?
+
+* Admin support - cost £££
+* Conference - cost £££
+* RStudio Cloud - cost £££
+* NHSR solutions - cost £££
+
+## The cost of everything...
+
+* You can't buy a community
+* But you can and must buy the glue that binds them together
+
 ## Force multiplier
 
 * Code is a force multiplier
