@@ -45,6 +45,8 @@
     * Open source
     * Teaching
 * Community driven
+* Training
+* NHS-R academy
 
 ## Open source
 
@@ -63,6 +65,7 @@
 * Book club - cost £0
 * Podcast - cost £0
 * NHSRplotthedots - cost £0
+* Delivering training - cost £0
 
 ## But you can keep them for the birds and bees...?
 
@@ -70,9 +73,13 @@
 * Conference - cost £££
 * RStudio Cloud - cost £££
 * NHSR solutions - cost £££
+* Design and write up of training - cost £££
 
-## The cost of everything...
+## No such thing as a free lunch
 
+* We believe in R, we believe in the NHS-R community, and we believe in each other
+* NHS-R is not a LinkedIn certification
+* It cannot be bought, sold, or exchanged
 * You can't buy a community
 * But you can and must buy the glue that binds them together
 
@@ -85,6 +92,13 @@
 * NHS-R is making people happy and productive
 * NHS-R is changing the lives of its members and improving healthcare for everyone in the UK
 
+## To answer the question finally...
+
+* How to make NHS-R more awesome?
+* Get out of its way
+* "Be more NHS-R"
+* Give analysts the space, time, and permissions to spontaneously associate and collaborate
+* This kind of collaboration gave us R and Python, and many of the tools that power the internet (Linux, WordPress, Apache...)
 
 <!---
 Please note the following rather convoluted terminal command to render this talk to Beamer pdf
