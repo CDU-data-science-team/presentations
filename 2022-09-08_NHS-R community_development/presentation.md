@@ -26,6 +26,30 @@
 * One for every provider trust in the country- simple, RAP compliant, useful
 * One to show the potential for open source data science
 
+## NHSRplotthedots
+
+* SPCs and [Making Data Count](https://www.england.nhs.uk/publication/making-data-count/)
+* Done up and down the country with Excel templates
+    * Not RAP compliant
+    * ... what is RAP?
+* We discussed the idea of an R implementation of this for a long time
+* In the end someone just got on with it
+* Someone from the community shared code they'd already written
+* Group effort to expand and improve
+* Now on CRAN with >1500 downloads
+
+## Community roles
+
+* Methodology
+* Documentation
+* User requirements and testing
+* Code and repo management
+* Wider community engagement
+
+## Why it succeeded
+
+* Real 
+
 <!---
 Please note the following rather convoluted terminal command to render this talk to Beamer pdf
 
