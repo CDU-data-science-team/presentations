@@ -20,6 +20,19 @@
 * Building tools for everyone to use- WAGOLL
 * Lead by example- share, be inclusive, and be attractive to beginners
 
+## Open source
+
+* Natural to assume that the NHS is a collaborative enterprise
+* Until recently there were no mechanisms to help us cooperate at all
+* Everything is done over and over again, duplicatively, on proprietary DBs
+* In the recent past:
+    * No incentive to share
+    * Many barriers to sharing
+
+## Who does share? 
+
+
+
 ## Building tools
 
 * Two tools today
