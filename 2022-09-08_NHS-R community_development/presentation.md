@@ -31,13 +31,57 @@
 
 ## Who does share? 
 
+* [Facebook](https://engineering.fb.com/2020/01/13/open-source/open-source-2019/)
+* [Microsoft](https://opensource.microsoft.com/projects/)
+* [IBM](https://www.ibm.com/opensource/)
+* [Samsung](https://opensource.samsung.com/main)
 
+## Let's talk about Prophet
+
+* What is Prophet?
+* Why did Facebook give away Prophet (MIT licence)?
+* I really have no idea, but let’s speculate anyway
+    * Developers like to work in the open so it helps with recruitment and retention
+    * They want people to use it so they can get better suggestions about how to improve it
+    * They want people to improve it by submitting pull requests (several at the time of writing)
+    * They don’t want the hassle of selling it!
+
+## Why would we share?
+
+* The four freedoms
+    * Use
+    * Study
+    * Share
+    * Improve
+
+## How are we doing?
+
+* Some orgs are still fighting about use!
+* Many fighting tooth and nail over learning and transparency
+    * Why?
+* Building? Largely a pipe dream
+    * Why?
+* Contributing? Imagine the headlines!
+    * Why?
+
+## What can NHS-R do about this?
+
+* Permission
+* Visibility and community
+* Skills
+    * Basic- git, GitHub, issues, pull requests...
+    * Advanced- building reusable stuff is hard
+    * Advanced advanced- building reusable stuff *together* is really hard!
 
 ## Building tools
 
 * Two tools today
 * One for every provider trust in the country- simple, RAP compliant, useful
 * One to show the potential for open source data science
+
+## NHSRplotthedots
+
+
 
 <!---
 Please note the following rather convoluted terminal command to render this talk to Beamer pdf
