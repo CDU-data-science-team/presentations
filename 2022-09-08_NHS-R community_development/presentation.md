@@ -81,6 +81,40 @@
 
 ## NHSRplotthedots
 
+* SPCs and [Making Data Count](https://www.england.nhs.uk/publication/making-data-count/)
+* Done up and down the country with Excel templates
+    * Not RAP compliant
+    * ... what is RAP?
+* We discussed the idea of an R implementation of this for a long time
+* In the end someone just got on with it
+* Someone from the community shared code they'd already written
+* Group effort to expand and improve
+* Now on CRAN with >1500 downloads
+
+## Community roles
+
+* Methodology
+* Documentation
+* User requirements and testing
+* Code and repo management
+* Wider community engagement
+
+## Why it succeeded
+
+* Real business need
+* Grew organically from users deploying the package
+* Community roles
+* CRAN package == Good for security departments in NHS
+* Promoted by MDC
+
+## Text mining of patient experience data
+
+* One year funded project
+* Now funded for another year
+* NHS-R funded an R wrapper to the Python code in the project
+* Python code, Shiny dashboard
+    * Ship the code as MIT and do a managed deployment on RStudio Connect
+
 
 
 <!---
