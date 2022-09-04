@@ -61,8 +61,8 @@
     * Why?
 * Building? Largely a pipe dream
     * Why?
-* Contributing? Imagine the headlines!
-    * Why?
+* Contributing? No! 
+    * Why? *The Daily Mail test*
 
 ## What can NHS-R do about this?
 
@@ -106,16 +106,63 @@
 * Community roles
 * CRAN package == Good for security departments in NHS
 * Promoted by MDC
+* User engagement, teamwork
+    * A truly collaborative, high quality product
+    * Funding: £0
 
 ## Text mining of patient experience data
 
-* One year funded project
+* One year funded project (NHSE)
 * Now funded for another year
 * NHS-R funded an R wrapper to the Python code in the project
 * Python code, Shiny dashboard
     * Ship the code as MIT and do a managed deployment on RStudio Connect
 
+## Success!?
 
+* The code works and the evaluation was a success
+* There is a real and growing need for text analytics in healthcare
+    * DMs open 😉 
+* Judged by my own standards the project is not a success (yet!)
+    * Nobody outside the team has ever contributed to the code
+    * Nobody outside the team has even run the code
+
+## What are the barriers
+
+* Code is complex
+    * The whole pipeline is in two languages
+* Many of the pilot sites are locked into contracts with other providers
+    * Including collection and collation
+* BI systems are not usually in R
+    * (even ours aren't- except patient experience because I wrote it)
+* It's too cheap!
+
+## What can we do? 
+
+* Build tools, not pipelines
+    * Do one thing well
+* Start charging for open source (?!)
+* Get in the weeds and deploy it trust by trust (?!)
+* Listen to users and developers
+
+## Summary
+
+* Open source means efficiency, transparency, and building the stuff we *actually want*
+* Open source is hard. Using the tools is hard and writing the code is hard
+* Having permission to share (never mind about collaboratively build) is hard
+* NHS-R exists to give people the permission, skills, and sense of belonging necessary to build software together
+
+## The projects
+
+* NHSRplothedots is a testament to the power of community
+    * Does one thing, everybody wants it, easy to deploy, created spontaneously
+    * WAGOLL
+* Text mining is a problem to be solved
+    * I want to ship the code
+    * I want others to contribute
+    * I want someone else to host it, even
+* Can we build bigger than NHSRplotthedots?
+* Can we build smaller than patient experience text mining?
 
 <!---
 Please note the following rather convoluted terminal command to render this talk to Beamer pdf
