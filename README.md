@@ -6,7 +6,12 @@ Each folder in this repository contains the presentation and corresponding image
 
 ## Formats
 
-Where possible, presentations will be built from the [xaringan presentation template](https://github.com/CDU-data-science-team/presentation-template) and rendered in html formats to allow for accessibility. 
+Where possible, presentations will be built from the [xaringan presentation template](https://github.com/CDU-data-science-team/presentation-template) and rendered in html formats to allow for accessibility. Templates can be used directly from the team's [repository](https://github.com/CDU-data-science-team/presentation-template) or via installation of the package [{nottshcMethods}](https://github.com/CDU-data-science-team/nottshcMethods):
+
+```
+# install.packages("remotes")
+remotes::install_github("CDU-data-science-team/nottshcMethods")
+```
 
 Where presentations have been produced in Powerpoint these will be made available in pdf formats.
 
