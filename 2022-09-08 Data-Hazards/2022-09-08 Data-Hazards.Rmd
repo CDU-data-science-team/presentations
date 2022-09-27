@@ -502,7 +502,7 @@ name:resources
 
 --
 
-* Civil Service have an [awareness online course](https://gss.civilservice.gov.uk/training/awareness-in-data-ethics/)
+* Civil Service have an [awareness in data ethics online course](https://analysisfunction.civilservice.gov.uk/training/awareness-in-data-ethics/)
 
 --
 
