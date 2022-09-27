@@ -1,6 +1,6 @@
 ---
-title: "CDU Data Science Team &mdash; Midlands Analyst Huddle"
-subtitle: "Data Hazards"
+title: "CDU Data Science Team &mdash; Data Hazards"
+subtitle: "Structuring ethical questions for research/analysis"
 author: "Zoë Turner"
 institute: "Nottinghamshire Healthcare NHS Foundation Trust"
 output:
