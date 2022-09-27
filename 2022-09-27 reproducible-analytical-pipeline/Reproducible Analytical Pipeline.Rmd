@@ -1,0 +1,246 @@
+---
+title: "CDU Data Science Team &mdash; RAP"
+subtitle: "Reproducible Analytical Pipelines"
+author: "Zoë Turner"
+institute: "Nottinghamshire Healthcare NHS Foundation Trust"
+output:
+  xaringan::moon_reader:
+    css: 
+      - default
+      - css/nhsr.css
+      - css/nhsr-fonts.css
+    lib_dir: libs
+    seal: false
+    self_contained: true
+    nature:
+      highlightStyle: googlecode
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+class: title-slide, left, bottom
+
+```{r setup, include = FALSE}
+library(knitr)
+library(tidyverse)
+
+### Packages not on CRAN ###
+
+# install.packages("remotes")
+# remotes::install_github("mitchelloharawild/icons")
+library(icons) # icons need to be loaded to view so run following code if not already done
+# icons::download_fontawesome()
+
+# install.packages("devtools")
+#devtools::install_github("gadenbuie/xaringanExtra")
+library(xaringanExtra)
+xaringanExtra::use_share_again() # need to get the slide button on html view
+
+# set default options
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300,
+               dev.args = list(type = "cairo"),
+               eval = TRUE,
+               warning = FALSE,
+               message = FALSE,
+               error = FALSE)
+
+```
+
+```{r echo=FALSE}
+# Adds logo to all slides
+
+xaringanExtra::use_logo(
+  image_url = "https://cdu-data-science-team.github.io/assets/logo/nottshc-cdu-data-science-logo-800.png",
+  link_url = "https://cdu-data-science-team.github.io/team-blog/",
+  exclude_class = c("inverse", "hide-logo"),
+  width = "300px",
+  height = "200px",
+  position = css_position(top = "0em", right = "0em")
+)
+```
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author` | `r format(Sys.time(), '%B %Y')` 
+
+---
+class: inverse, middle, center
+
+# What is RAP?
+
+How many have heard of Reproducible Analytical Pipelines (RAP)?
+
+---
+class: inverse-white, middle
+
+# A story in Chrome tabs
+
+Guess how many tabs I have open in a "folder" called RAP?
+
+.pull-left[
+
+![Chalk drawn question mark on a black board](img/pexels-pixabay-356079.jpg)
+]
+
+--
+
+.pull-right[
+
+1. 1  
+1. 15  
+1. 30  
+1. 100  
+
+]
+---
+
+class: inverse-white, middle
+
+# Civil Service know about RAP!
+
+Since when?
+
+
+.pull-left[
+
+![Chalk drawn question mark on a black board](img/pexels-pixabay-356079.jpg)
+
+]
+
+--
+
+.pull-right[
+
+1. 1999  
+1. 2006  
+1. 2017  
+1. 2020
+
+]
+
+---
+class: inverse-white, middle
+
+# Quoting the Government Analytical Function
+
+> Reproducibility is the cornerstone of analysis. Analysts should get the same results as each other when using the same data and methods.
+
+--
+
+This is the very first line of the [foreword](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) from the Head of the Analysis Function and National Statistician Prof Sir Ian Diamond.
+
+
+---
+
+class: inverse-white, middle
+
+# Reproducible...
+
+## research
+
+> Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.
+
+[Coursera Reproducible Research course](https://www.coursera.org/learn/reproducible-research)
+
+--
+
+## analytical pipelines
+
+> ... produce high quality, shared, reviewable, re-usable, well-documented code for data curation and analysis; minimise inefficient duplication; avoid unverifiable ‘black box’ analyses; and make each new analysis faster.
+
+[Better, broader and safer: using health data for research and analysis](https://www.gov.uk/government/publications/better-broader-safer-using-health-data-for-research-and-analysis) also known as the Goldacre Review
+
+
+.footnote[
+[A manifesto for reproducible science](https://www.nature.com/articles/s41562-016-0021) Munafò, M., Nosek, B., Bishop, D. et al. A manifesto for reproducible science. Nat Hum Behav 1, 0021 (*2017*). https://doi.org/10.1038/s41562-016-0021
+]
+
+---
+class: center, middle
+
+# Breaking it down
+
+![Girl with wooden blocks which are rounded in overall shape but have straight sides](img/pexels-artem-podrez-6951915.jpg)
+
+---
+
+# Building blocks
+
+-	automate every step of analysis
+
+--
+
+-	have open code (publicly where possible and at the least within the team)
+
+--
+
+-	use version control
+
+--
+
+-	commented and documented code
+
+
+---
+
+# Read more about it!
+
+Just a few of those Government links I've got open:
+
+[Better, broader, safer Review](https://www.gov.uk/government/publications/better-broader-safer-using-health-data-for-research-and-analysis) and Twitter breakdown of the document by [Jess Morley](https://twitter.com/jessRmorley/status/1512013395897339909) as well as a [podcast](https://soundcloud.com/nhs-r-community/nhsr-jess-morley).
+
+[Government Analysis Function](https://analysisfunction.civilservice.gov.uk/policy-store/reproducible-analytical-pipelines-strategy/) 
+
+[Data Science Campus](https://datasciencecampus.ons.gov.uk/)
+
+[Government Data Science Slack](govdatascience.slack.com) - channel #rap_collaboration where RAP champion information is also shared
+
+[Udemy course RAP using R](https://www.udemy.com/course/reproducible-analytical-pipelines/) - free
+
+[Government RAP companion guide](https://ukgovdatascience.github.io/rap_companion/index.html#discovery)
+
+[NHS-R Community](https://nhsrcommunity.com/) and [NHS PyCom](https://nhs-pycom.net/) - support networks for R and Python including Slack groups
+
+[NHS Digital](https://nhsdigital.github.io/analytics-services-blog/2022/02/24/reproducible-analytical-pipelines-blog-1.html)
+
+--
+
+[CDU Data Science Team](https://cdu-data-science-team.github.io/team-blog/) - notes that we'd share with the team but publicly, a nice way to practice being open
+
+---
+
+# Last word - spreadsheets
+
+.pull-left[Where these are necessary, please make them accessible (which also makes them machine readable!)
+
+Good guidance from the [Government Analysis Function](https://analysisfunction.civilservice.gov.uk/policy-store/releasing-statistics-in-spreadsheets/)]
+
+.pull-right[
+![Cartoon image of green round creature with a cowboy hat sat upon a bigger bean shaped creature. The cowboy has a whip tied around grey, angry looking spreadsheets with data written above them](img/data_cowboy.png)
+]
+
+---
+
+class: inverse
+
+name: acknowledgement
+
+# Acknowledgments
+
+Acknowledgements: the professional look of this presentation, using NHS and Nottinghamshire Healthcare NHS Foundation Trust colour branding, exists because of the amazing work of Silvia Canelón, details of the workshops she ran at the [NHS-R Community conference](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html), Milan Wiedemann who created the CDU Data Science logo with the help of the team and Zoë Turner for putting together the slides.
+
+[`r icons::fontawesome("twitter")` @DataScienceNott](https://twitter.com/DataScienceNott)  
+[`r icons::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)  
+[`r icons::fontawesome("paper-plane")` cdudatascience@nottshc.nhs.uk](mailto:cdudatascience@nottshc.nhs.uk)
+
+Images (in order of appearance):
+
+Photo by Pixabay: https://www.pexels.com/photo/question-mark-on-chalk-board-356079/  
+Photo by Artem Podrez: https://www.pexels.com/photo/man-person-people-woman-6951915/  
+Allison Horst's [Data Cowboy](https://github.com/allisonhorst/stats-illustrations/blob/main/rstats-artwork/data_cowboy.png)
