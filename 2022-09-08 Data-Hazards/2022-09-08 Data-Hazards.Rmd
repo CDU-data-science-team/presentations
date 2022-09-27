@@ -147,6 +147,8 @@ b) use the new code
 
 ---
 
+class: hide-logo
+
 # Right answer?
 
 .pull-left[
@@ -155,6 +157,8 @@ b) use the new code
 --
 
 .pull-right[
+
+</br>
 What do we do when there are no clear right or wrong answers? 
 
 
@@ -164,6 +168,8 @@ Do we only find out the answer was wrong after it's caused damage?
 When do we even find out if we've caused damage?
 ]
 ---
+
+class: hide-logo
 
 # COSHH Pictograms  
 
@@ -236,8 +242,24 @@ class: inverse, middle, center
 
 # Scenario 1 - revisited
 
----
+Links:
 
+[General hazard](#general)  
+[Reinforces bias](#bias)  
+[Ranks or classifies people](#rank)  
+[High environment cost](#environment)  
+[Lacks community involvement](#community)  
+[Danger of misuse](#misuse)  
+[Difficult to understand](#understand)  
+[May cause direct harm](#harm)  
+[Risk to privacy](#privacy)  
+[Automates decision making](#decisions)  
+[Lacks informed consent](#consent)  
+  
+[More resources](#resources)
+
+---
+name: general
 class: hide-logo
 
 # [General hazard](https://datahazards.com/contents/hazards/general-hazard.html)
@@ -264,7 +286,7 @@ Issue corrections publicly?
 Share methodology and update it if changes? 
 ]
 ---
-
+name: bias
 class: hide-logo
 
 # [Reinforce Existing bias](https://datahazards.com/contents/hazards/reinforces-biases.html)
@@ -291,7 +313,7 @@ Precautions:
 Although the Freedom of Information related to one service, could this be extended to other services to see if there is bias between services and/or certain groups.
 ]
 ---
-
+name: rank
 class: hide-logo
 
 # [Ranks or classifies people](https://datahazards.com/contents/hazards/ranks-classifies.html)
@@ -312,7 +334,7 @@ Precautions:
 Publish the methodology and/or code for other Trusts to replicate or audit if required.
 ]
 ---
-
+name: environment
 class: hide-logo
 
 # [High Environmental Cost](https://datahazards.com/contents/hazards/high-environmental-cost.html)
@@ -334,7 +356,7 @@ Precautions:
 Code reviews to ensure code is not unnecessarily resource hungry. 
 ]
 ---
-
+name: community
 class: hide-logo
 
 # [Lacks community involvement](https://datahazards.com/contents/hazards/lacks-community-involvement.html)
@@ -359,7 +381,7 @@ Could some Freedom of Information requests become analyses in their own right?
 For example, a question that highlights a data gap like smoking cessation used for patients who are under 16 in mental health services highlighted data on smoking status is poorly recorded. Could we escalate the poor data?
 ]
 ---
-
+name: misuse
 class: hide-logo
 
 # [Danger of misuse](https://datahazards.com/contents/hazards/danger-of-misuse.html)
@@ -380,7 +402,7 @@ Precautions:
 Could we mitigate by sharing and publishing methodology/code?
 ]
 ---
-
+name: understand
 class: hide-logo
 
 # [Difficult to understand](https://datahazards.com/contents/hazards/difficult-to-understand.html)
@@ -404,7 +426,7 @@ Providing data with a caveat that it is possible it could change.
 Sharing code/methodology.
 ]
 ---
-
+name: harm
 class: hide-logo
 
 # [May cause direct harm](https://datahazards.com/contents/hazards/direct-harm.html)
@@ -420,7 +442,7 @@ Difficult to say what this could be?
 
 ]
 ---
-
+name: privacy
 class: hide-logo
 
 # [Risk to privacy](https://datahazards.com/contents/hazards/risk-to-privacy.html)
@@ -437,7 +459,7 @@ Possibly not as data is scrutinised by Information Governance often for identifi
 ]
 
 ---
-
+name: decisions
 class: hide-logo
 
 # [Automates decision making](https://datahazards.com/contents/hazards/automates-decision-making.html)
@@ -454,7 +476,7 @@ Possibly not as the data is re-run as requested, and an error was identified so 
 
 ]
 ---
-
+name:consent
 class: hide-logo
 
 # [Lacks informed Consent](https://datahazards.com/contents/hazards/lacks-informed-consent.html)
@@ -471,14 +493,12 @@ Data is often about the service, not the patients so are service audits rather t
 ]
 
 ---
-
+name:resources
 # More Ethics Resources
 
 --
 
 * Bristol University have a virtual [Data Ethics Club](https://dataethicsclub.com/)  
-
-[The next meeting](https://dataethicsclub.com/join_in/meetings/2022/09-sep/21-09-22_meeting.html) will discuss “Hacking the Cis-tem”, which is an article about transgender Britons who tried to correct the gender listed on their government-issued ID cards, but were limited by computerised systems.  
 
 --
 
