@@ -72,89 +72,59 @@ xaringanExtra::use_logo(
 
 # Introduction
 
+* A history of Shiny
 * What does Shiny do well? 
 * What does Shiny not do well?
 * How can we combine Shiny with other tools to improve our applications?
 
 ---
-class: inverse, middle, center
 
-# An inverse slide
+# Shiny - a history
 
-### Often used for transitions
-
-Links on an inverse slide would look like  
-[this one leading to acknowledgements](#acknowledgement)
-
----
-class: inverse-white, middle, center
-
-# A white background inverse slide
-
-### To remove bottom image
-
-If slides overrun the bottom image this slide can be used to remove the image completely - keeping the logo unless hide-logo added to `class:` like  
-[this one leading to a table that overruns the background](#line-highlight)
+* This is my personal recollection. YMMV
+* In the early days it was really more suitable for exploring your own data
+* Lacked good documentation, modules and many important functions
+* Lots of self taught programmers writing applications with little good practice guidance
+  * With predictable consequences `r emo::ji("upside_down_face")`
 
 ---
 
-# Bullets and text color
+# When all you have is a hammer...
 
---
+* (everything looks like a nail)
+* If you only know Excel...
+  * You end up writing complex fragile models in it
+* If you're a data scientist that only knows Shiny for interaction...
+  * You end up writing all of your interactive code in R
+  
+---
 
-* first point
+class: hide-logo
 
---
+# Data science is a team sport
 
-* second point
-
---
-
-* third point
-
---
-
------
-
-You can emphasize text with color:
-
-* .blue[Blue]
-* .green[Green]
-* .pink[Pink]
-* .red[Red]
-* .warmyellow[Warm Yellow]
-
---
-
-And make it **bold** or _italicized_ using Markdown:
-
-* .blue[**Bold** or _italicized_]
-* .green[**Bold** or _italicized_]
-* .pink[**Bold** or _italicized_]
-* .red[**Bold** or _italicized_]
-* .warmyellow[**Bold** or _italicized_]
+* Very often we see data scientists building Shiny applications of their own models
+  * This is fine for testing, not so fine for production
+* The world needs Shiny developers
+* What are the skills of a Shiny developer?
+  * (some of...)
+  * R/ Shiny `r emo::ji("wink")`
+  * DevOps, deployment, {pins}, {targets}...
+  * Web development, JavaScript, accessibility, visualisation
+  * Working with modules and working with codebases written by others
+    * Using internal packages for data processing and analysis
+    * This code could be in R or Python
 
 ---
-# Tables and quotes
 
-### Table
+# The context
 
-```{r}
-knitr::kable(head(iris), format = 'html')
-```
-
-### Quote
-
-> This is what a quote looks like.
+* We have had a year of funding to build a text classification model for patient feedback
+* We now have another year of funding to make it better, especially the frontend
+* The model itself is written in Python
+* 
 
 ---
-class: inverse-white
-
-name: line-highlight
-
-# Line highlighting
-
-An example of using the trailing comment `#<<` to highlight lines:
 
 ### Code
 
