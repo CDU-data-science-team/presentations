@@ -1,6 +1,6 @@
 ---
 title: "Next level Shiny- R, Python, and JavaScript"
-subtitle: "Shiny in Production conference, 7th November 2022"
+subtitle: "Shiny in Production conference, 7th October 2022"
 author: "Chris Beeley"
 institute: "Nottinghamshire Healthcare NHS Foundation Trust"
 output:
@@ -32,6 +32,8 @@ library(knitr)
 library(icons) # icons need to be loaded to view so run following code if not already done
 # icons::download_fontawesome()
 
+# devtools::install_github("hadley/emo")
+
 # install.packages("devtools")
 #devtools::install_github("gadenbuie/xaringanExtra")
 library(xaringanExtra)
@@ -53,14 +55,14 @@ opts_chunk$set(echo = FALSE,
 ```{r echo=FALSE}
 # Adds logo to all slides
 
-xaringanExtra::use_logo(
-  image_url = "https://cdu-data-science-team.github.io/assets/logo/nottshc-cdu-data-science-logo-800.png",
-  link_url = "https://cdu-data-science-team.github.io/team-blog/",
-  exclude_class = c("inverse", "hide-logo"),
-  width = "300px",
-  height = "200px",
-  position = css_position(top = "0em", right = "0em")
-)
+# xaringanExtra::use_logo(
+#   image_url = "https://cdu-data-science-team.github.io/assets/logo/nottshc-cdu-data-science-logo-800.png",
+#   link_url = "https://cdu-data-science-team.github.io/team-blog/",
+#   exclude_class = c("inverse", "hide-logo"),
+#   width = "300px",
+#   height = "200px",
+#   position = css_position(top = "0em", right = "0em")
+# )
 ```
 
 # `r rmarkdown::metadata$title`
@@ -85,7 +87,7 @@ xaringanExtra::use_logo(
 * In the early days it was really more suitable for exploring your own data
 * Lacked good documentation, modules and many important functions
 * Lots of self taught programmers writing applications with little good practice guidance
-  * With predictable consequences `r emo::ji("upside_down_face")`
+* With predictable consequences `r emo::ji("upside_down_face")`
 
 ---
 
@@ -93,10 +95,10 @@ xaringanExtra::use_logo(
 
 * (everything looks like a nail)
 * If you only know Excel...
-  * You end up writing complex fragile models in it
+    * You end up writing complex fragile models in it
 * If you're a data scientist that only knows Shiny for interaction...
-  * You end up writing all of your interactive code in R
-  
+    * You end up writing all of your interactive code in R
+
 ---
 
 class: hide-logo
@@ -104,68 +106,218 @@ class: hide-logo
 # Data science is a team sport
 
 * Very often we see data scientists building Shiny applications of their own models
-  * This is fine for testing, not so fine for production
+* This is fine for testing, not so fine for production
 * The world needs Shiny developers
-* What are the skills of a Shiny developer?
-  * (some of...)
-  * R/ Shiny `r emo::ji("wink")`
-  * DevOps, deployment, {pins}, {targets}...
-  * Web development, JavaScript, accessibility, visualisation
-  * Working with modules and working with codebases written by others
+
+---
+
+# What are the skills of a Shiny developer?
+
+* (some of...)
+    * R/ Shiny `r emo::ji("wink")`
+    * DevOps, deployment, {pins}, {targets}...
+    * Web development, JavaScript, accessibility, visualisation
+    * Working with modules and working with codebases written by others
     * Using internal packages for data processing and analysis
-    * This code could be in R or Python
+        * This code could be in R or Python 
 
 ---
 
 # The context
 
+* The NHS collects a lot of patient experience data
+* Rate the service 1-5 (Very poor... Excellent) but also give written feedback
+    * "Parking was difficult"
+    * "Doctor was rude"
+    * "You saved my life"
+* Many organisations lack the staffing to read all of the feedback in a systematic way
+* We have built an algorithm to read it
+    * Theme
+    * "Criticality"
+
+---
+
+# Patient experience 101
+
+* Tick box scoring is not useful (or accurate)
+* Text based data is _complex_ and built on _human experience_
+* We're not making word clouds!
+* We're not classifying movie reviews or Reddit posts
+* The tool should enhance, not replace, human understanding
+* "A recommendation engine for feedback data"
+
+---
+
+class: hide-logo
+
+# The work
+
 * We have had a year of funding to build a text classification model for patient feedback
 * We now have another year of funding to make it better, especially the frontend
 * The model itself is written in Python
-* 
+* Marked up and classified text data is a very rich source of data
+* We need to build quite a sophisticated user interface to get the best out of this data
 
 ---
 
-### Code
+# The challenge
 
-```{r example, tidy=FALSE, eval=FALSE, echo=TRUE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #<<
-  geom_smooth()    #<<
+* We need...
+* Performant, powerful, state of the art text mining and ML
+* A highly interactive user interface which maximises the information we give to the user and maximises the information we collect from the enduser
+* I think it's probably fair to say that R/ Shiny is not particularly good at either
+
+---
+
+# To the rescue!
+
+.pull-left[
+<img src="JavaScript.png" width = 400>
+]
+
+.pull-right[
+<img src="python.jfif" width = 400>
+]
+
+---
+
+# Python! Huh! What is it good for?
+
+* Absolutely machine learning!
+* The project makes (or will make) free use of loads of Python packages, including:
+  * Scikit-learn
+  * Gensim
+  * Text blob
+  * Spacy
+  * Vader
+* Python ML is fast and multicore out of the box
+
+---
+
+# Well how do you do it?
+
+* [Demo time!](https://involve.nottshc.nhs.uk/rsconnect/jane_eyre/)
+
+---
+
+# So how _do_ you do it?
+
+* With {reticulate} (natch)
+* With functions
+* That's it!
+
+```{python, eval = FALSE, echo = TRUE}
+
+from textblob import TextBlob
+
+def sentiment(text):
+  text_blob = TextBlob(text)
+  return(text_blob.sentiment.polarity)
+
 ```
 
 ---
 
-### Output
+# And over in your Shiny application...
 
-```{r ref.label="example", eval=TRUE, echo=FALSE}
-library(ggplot2)
-ggplot(mtcars) + 
-  aes(mpg, disp) + 
-  geom_point() +   #<<
-  geom_smooth()    #<<
+```{r, eval = FALSE, echo = TRUE}
+
+# load functions
+reticulate::source_python("python_code.py") 
+
+output$histogram <- renderPlot({
+  
+  sentiment_score <- purrr::map_dbl(selected_text(), function(x){
+    sentiment(x)
+  })
+  
+  df_graph <- data.frame("sentiment" = sentiment_score)
+  
+  df_graph |>
+    ggplot2::ggplot(ggplot2::aes(sentiment)) +
+    ggplot2::geom_histogram() + ggplot2::xlim(-1, 1)
+})
+
 ```
 
 ---
 
-class: inverse-white, hide-logo
+# Wait, there's more...
 
-# Footnotes
-
-The logo can be removed from a slide where the title overruns by using class: hide-logo
-
-.footnote[The **nhsr theme** was designed by [Silvia Canelon](https://silvia.rbind.io) for, and with feedback from, the [NHS-R Community](https://github.com/nhs-r-community), following the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/). Note that the xaringan share overlaps the footnotes if there are any hyperlinks.]
+* [You can import Python packages directly and call them from R](https://rstudio.github.io/reticulate/#importing-python-modules)
+* [You can run Python scripts as files or directly as quoted code and access the objects they create as R objects](https://rstudio.github.io/reticulate/articles/calling_python.html#executing-code)
+* [You can build an R wrapper to your Python code and just call that directly](https://rstudio.github.io/reticulate/articles/package.html)
 
 ---
+
+# And now to JavaScript
+
+* Every time we interact with a Shiny application we hit the server
+* There are lots of ways of limiting and otherwise handling our interactions with the server
+    * Reactive functions
+    * Caching outputs and other intermediate steps
+    * Throttling, debouncing
+    * ... you're at a Shiny conference. You know a lot of this
+    
+---
+
+# There is another way
+
+* What if we could get the user's computer to do some work?
+* It's probably pretty much idle while they're using our app, so let's borrow the CPU to do some stuff for them
+    * Not crypto mining (that's another talk!)
+    * We can run JavaScript in the browser
+* There is lots of JavaScript packaged up for R
+    * The DT package uses JavaScript
+    * {shinyjs} has LOADS of useful JavaScript in it
+
+---
+
+# All your JavaScript are belong to us
+
+* You can take it further without really too much effort
+    * You can use JavaScript packages
+    * You can write your own JavaScript
+* [Demo time!](https://involve.nottshc.nhs.uk/rsconnect/jane_eyre/)
+
+---
+
+# Golem to the rescue!
+
+* Golem even makes this easy
+
+```{r eval = FALSE, echo = TRUE}
+
+golem::add_js_file("heart")
+golem::add_css_file("heart")
+
+```
+
+---
+
+# My heart will go in inst/
+
+* JavaScript and any modules that are called go in inst/app/www
+* Any files the browser needs like graphics go in there too
+    * (and are referred to in code just as "www/filename.png")
+
+---
+
+# Why are we doing this again?
+
+* There are non silly applications of this kind of work
+* We can mark up and highlight text in complex ways
+    * We can mark negative sentences
+    * We can mark words on a theme (care words, staff words, emotional words...)
+    * We can use a huge range of JavaScript output widgets to make interesting visualisations
+    * Devise methods of collecting data from the user
+        * _That_ sentence is about *this*, _this_ sentence is about *that*
+
+---
+
 class: inverse
 
-name: acknowledgement
-
-# Acknowledgments
-
-Acknowledgements: the professional look of this presentation, using NHS and Nottinghamshire Healthcare NHS Foundation Trust colour branding, exists because of the amazing work of Silvia Canelón, details of the workshops she ran at the [NHS-R Community conference](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html), Milan Wiedemann who created the CDU Data Science logo with the help of the team and Zoë Turner for putting together the slides.
+# The team
 
 [`r icons::fontawesome("twitter")` @DataScienceNott](https://twitter.com/DataScienceNott)  
 [`r icons::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)  
