@@ -315,11 +315,28 @@ golem::add_css_file("heart")
 
 ---
 
+# That's all, folks!
+
+* Let Shiny do what Shiny does best
+* Don't be afraid to bring in other languages and packages in other languages to do what they do best
+* Train, recruit, and retain Shiny developers
+    * Allow them to develop and use a diverse skillset
+
+---
+
 class: inverse
 
-# The team
+# Me
 
-[`r icons::fontawesome("twitter")` @DataScienceNott](https://twitter.com/DataScienceNott)  
-[`r icons::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)  
+[`r icons::fontawesome("twitter")` @ChrisBeeley](https://twitter.com/ChrisBeeley)
+
+[`r icons::fontawesome("github")` My GitHub](https://github.com/ChrisBeeley)
+
+## The team
+
+[`r icons::fontawesome("twitter")` @DataScienceNott](https://twitter.com/DataScienceNott)
+
+[`r icons::fontawesome("github")` Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team)
+
 [`r icons::fontawesome("paper-plane")` cdudatascience@nottshc.nhs.uk](mailto:cdudatascience@nottshc.nhs.uk)
 
