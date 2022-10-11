@@ -1,6 +1,8 @@
 ---
 title: "RAP in the NHS"
-format: revealjs
+format: 
+  revealjs: 
+    slide-number: true
 ---
 
 ## Summary
@@ -98,7 +100,7 @@ It should cover:
     * What language should it be in?
     * Core components:
         * Intro to programming
-        * Verion control
+        * Version control
     * Add ons
         * Reporting and deployment
         * CI/ CD
@@ -114,4 +116,8 @@ It should cover:
 ## Components of an effective journey to RAP and what it means for the role
 
 * "T- shaped" staff
+* RAP is done by teams, not by individuals
+* Selling the approach
+* Selling delays and mishaps
+* Selling openness
 

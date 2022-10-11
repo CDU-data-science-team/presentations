@@ -7,7 +7,7 @@
 <link href="2022-10-18_nhs-rap_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="2022-10-18_nhs-rap_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="2022-10-18_nhs-rap_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.189">
+  <meta name="generator" content="quarto-1.0.36">
 
   <title>RAP in the NHS</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,15 +18,10 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
   </style>
   <link rel="stylesheet" href="2022-10-18_nhs-rap_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="2022-10-18_nhs-rap_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -469,7 +464,7 @@
 <li>Core components:
 <ul>
 <li>Intro to programming</li>
-<li>Verion control</li>
+<li>Version control</li>
 </ul></li>
 <li>Add ons
 <ul>
@@ -497,6 +492,10 @@
 <h2>Components of an effective journey to RAP and what it means for the role</h2>
 <ul>
 <li>“T- shaped” staff</li>
+<li>RAP is done by teams, not by individuals</li>
+<li>Selling the approach</li>
+<li>Selling delays and mishaps</li>
+<li>Selling openness</li>
 </ul>
 <div class="footer footer-default">
 
@@ -554,7 +553,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -781,8 +780,7 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          let href = ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
