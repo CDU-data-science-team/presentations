@@ -23,11 +23,8 @@ It should cover:
 
 ## What is RAP?
 
-* minimise manual steps
-* be built using open source software
-* be open to anyone for review and re-use
-* guarantee an audit trail using version control software
-* well-commented and documentation embedded and version controlled within the work
+* Same data, same results
+* 
 
 ## What is the ultimate form of RAP?
 
