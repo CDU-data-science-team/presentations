@@ -1,90 +1,55 @@
 ---
-title: "RAP in the NHS"
+title: "RAP in health and care"
 format: 
   revealjs: 
     slide-number: true
 ---
 
-<!-- 
 
 ## Summary
-
-It should cover:
 
 * Your vision for RAP for NHS and care staff
 * Your experience with RAP in your own team and organisation
 * The key issues in delivering training to NHS and care staff and how these might be overcome
-* Your reflections on the components of an effective journey to RAP and what this mean for this role -->
+* Your reflections on the components of an effective journey to RAP and what this mean for this role
 
 ## What is RAP?
 
 * Same data, same results
 
-## What is my vision for RAP in health and care?
-
-* RAP is a whole organisation approach
-    * RAP procurement of proprietary PHRs
-    * RAP procurement of analytic software
-    * Data is represented in code
-
 ## What is the ultimate form of RAP?
 
 * RAP is used to maximise transparency
-    * Analyses are shared freely where possible within the organisation
+    * Analyses are shared (rerunnable) freely where possible within the organisation
     * Analytic code is *all* shared outside the organisation
 * RAP is used to drive analytic standards
-    * Someone expert in analysis can rapidly review analytic pipelines and consider where they're appropriate for further analysis
-* Renv, CI/ CD
-* Esteem of data engineering
-    * Not just running a database, making it *work*
-    * Data engineering is done to fulfil the analytics objectives of the organisation
-* There are no SPOFs, and no hero coders
-    * Every line of code is tested and reviewed, and every line of code is understood by 2+ people
-    
+
 ## What is the ultimate form of RAP?
 
 * Culture change
     * Desire for transparency to make sure analysis is right
-    * Distrust of black box results at any stage of the pipeline
+    * ["Nullius in verba"](https://royalsociety.org/about-us/history/)
 * RAP is a whole region approach
-    * Concerted collaboration between ICS members who speak common "language"
+    * Concerted collaboration between ICS/ DSN members who speak common "language"
     * Inter org code reviews
     * Whole system methodologies wRAPped and used across orgs (e.g. demographic characteristics of a population)
 
-# The key issues in delivering training to NHS and care staff and how these might be overcome
-
 ## Key issues in training
 
-* Getting the right people in the door
-    * Who is doing RAP and why
 * Making sure the materials are accessIble *and* accessAble
     * Open licence
-* WAGOLL
-* WAGEOLL
-* What is RAP? 
-    * Is it data science?
-    * Is it data engineering?
-    * Is it something entirely new?
+* Experiential learning
+  * Cooperation- DSN/ NHS-R
 
 ## Key issues in training
 
 * Making it useful
     * RAP is *not* just for big returns of data
     * [Is it worth the time?](https://xkcd.com/1205/)
+    * Reuse regionally and nationally
     
 ![](is_it_worth_the_time.png)
     
-## Key issues in training
-
-* What are the components of RAP training?
-    * What language should it be in?
-    * Core components:
-        * Intro to programming
-        * Version control
-    * Add ons
-        * Reporting and deployment
-        * CI/ CD
-        
 ## My experience of RAP
 
 * [I have been promoting RAP in my Trust for 10 years](https://chrisbeeley.net/?p=1660)
@@ -104,16 +69,30 @@ It should cover:
     
 ## Components of an effective journey to RAP and what it means for the role
 
-* "T- shaped" staff
-    * Data engineers who understand analytics
-    * Data scientists who understand data engineering
-* RAP is done by teams, not by individuals
-  * Some teams will be small, especially at first
 * Selling the approach
   * The wins are quick
-  * Better trained and maintained staff
-  * 
-* Selling delays and mishaps
-  * *Think* about IG
-* Selling openness
+  * Better trained and retained staff
+  * More accurate and more interesting analyses
+* Where are the blockers?
+  * In the middle
+  
+---
+
+## Summary
+
+:::: {.columns}
+
+::: {.column width="60%"}
+* Truly successful RAP depends on:
+  * Experts driving standards
+  * Openness and willingness to make mistakes
+  * Collaboration and cooperation
+* All these factors required concerted and properly funded action
+* The time is now
+:::
+
+::: {.column width="40%"}
+![](rap_all_the_things.jpg)
+:::
+::::
 
