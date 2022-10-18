@@ -5,6 +5,8 @@ format:
     slide-number: true
 ---
 
+<!-- 
+
 ## Summary
 
 It should cover:
@@ -12,7 +14,7 @@ It should cover:
 * Your vision for RAP for NHS and care staff
 * Your experience with RAP in your own team and organisation
 * The key issues in delivering training to NHS and care staff and how these might be overcome
-* Your reflections on the components of an effective journey to RAP and what this mean for this role
+* Your reflections on the components of an effective journey to RAP and what this mean for this role -->
 
 ## Suggested topics
 
@@ -24,38 +26,24 @@ It should cover:
 ## What is RAP?
 
 * Same data, same results
-* 
 
 ## What is the ultimate form of RAP?
 
 * RAP is a whole organisation approach
     * RAP procurement of proprietary PHRs
     * RAP procurement of analytic software
-    * Data code
-* There is only one data model
-    * That's not to say that all the DBs are connected or coherent (obviously!)
-    * But their differences are understood and documented
+    * Data is represented in code
 
 ## What is the ultimate form of RAP?
 
-* Everybody contributes to the data model
-    * Those who can, PR
-    * Those who can't, read plain English descriptions of metrics and organisational features and contribute to them in plain English
 * There are no SPOFs, and no hero coders
     * Every line of code is tested and reviewed, and every line of code is understood by 2+ people
-
-## What is the ultimate form of RAP?
-    
 * RAP is used to maximise transparency
     * Analyses are shared freely where possible within the organisation
     * Analytic code is *all* shared outside the organisation
 * RAP is used to drive analytic standards
     * Someone expert in analysis can rapidly review analytic pipelines and consider where they're appropriate for further analysis
 * Renv, CI/ CD
-
-## What is the ultimate form of RAP?
-
-* Strategic analysis of what insight the organisation needs and the data work necessary to make it possible
 * Esteem of data engineering
     * Not just running a database, making it *work*
     * Data engineering is done to fulfil the analytics objectives of the organisation
@@ -77,6 +65,7 @@ It should cover:
 * Getting the right people in the door
     * Who is doing RAP and why
 * Making sure the materials are accessIble *and* accessAble
+    * Open licence
 * WAGOLL
 * What is RAP? 
     * Is it data science?
@@ -101,6 +90,15 @@ It should cover:
     * Add ons
         * Reporting and deployment
         * CI/ CD
+        
+## My experience of RAP
+
+* [I have been promoting RAP in my Trust for 10 years](https://chrisbeeley.net/?p=1660)
+* My entire journey with R was based on RAP
+* My team is a leading practitioner of RAP across the NHS
+    * Version control
+    * Common tools for data access
+    * Documentation and documented functions
 
 ## Components of an effective journey to RAP and what it means for the role
 
@@ -113,7 +111,10 @@ It should cover:
 ## Components of an effective journey to RAP and what it means for the role
 
 * "T- shaped" staff
+    * Data engineers who understand analytics
+    * Data scientists who understand data engineering
 * RAP is done by teams, not by individuals
+  * Some teams will be small, especially at first
 * Selling the approach
 * Selling delays and mishaps
 * Selling openness

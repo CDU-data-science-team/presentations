@@ -7,7 +7,7 @@
 <link href="2022-10-18_nhs-rap_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="2022-10-18_nhs-rap_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="2022-10-18_nhs-rap_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.1.189">
 
   <title>RAP in the NHS</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,10 +18,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="2022-10-18_nhs-rap_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="2022-10-18_nhs-rap_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -343,11 +348,7 @@
 <section id="what-is-rap" class="slide level2">
 <h2>What is RAP?</h2>
 <ul>
-<li>minimise manual steps</li>
-<li>be built using open source software</li>
-<li>be open to anyone for review and re-use</li>
-<li>guarantee an audit trail using version control software</li>
-<li>well-commented and documentation embedded and version controlled within the work</li>
+<li>Same data, same results</li>
 </ul>
 </section>
 <section id="what-is-the-ultimate-form-of-rap" class="slide level2">
@@ -359,30 +360,15 @@
 <li>RAP procurement of analytic software</li>
 <li>Data code</li>
 </ul></li>
-<li>There is only one data model
-<ul>
-<li>That’s not to say that all the DBs are connected or coherent (obviously!)</li>
-<li>But their differences are understood and documented</li>
-</ul></li>
 </ul>
 </section>
 <section id="what-is-the-ultimate-form-of-rap-1" class="slide level2">
 <h2>What is the ultimate form of RAP?</h2>
 <ul>
-<li>Everybody contributes to the data model
-<ul>
-<li>Those who can, PR</li>
-<li>Those who can’t, read plain English descriptions of metrics and organisational features and contribute to them in plain English</li>
-</ul></li>
 <li>There are no SPOFs, and no hero coders
 <ul>
 <li>Every line of code is tested and reviewed, and every line of code is understood by 2+ people</li>
 </ul></li>
-</ul>
-</section>
-<section id="what-is-the-ultimate-form-of-rap-2" class="slide level2">
-<h2>What is the ultimate form of RAP?</h2>
-<ul>
 <li>RAP is used to maximise transparency
 <ul>
 <li>Analyses are shared freely where possible within the organisation</li>
@@ -393,12 +379,6 @@
 <li>Someone expert in analysis can rapidly review analytic pipelines and consider where they’re appropriate for further analysis</li>
 </ul></li>
 <li>Renv, CI/ CD</li>
-</ul>
-</section>
-<section id="what-is-the-ultimate-form-of-rap-3" class="slide level2">
-<h2>What is the ultimate form of RAP?</h2>
-<ul>
-<li>Strategic analysis of what insight the organisation needs and the data work necessary to make it possible</li>
 <li>Esteem of data engineering
 <ul>
 <li>Not just running a database, making it <em>work</em></li>
@@ -406,7 +386,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="what-is-the-ultimate-form-of-rap-4" class="slide level2">
+<section id="what-is-the-ultimate-form-of-rap-2" class="slide level2">
 <h2>What is the ultimate form of RAP?</h2>
 <ul>
 <li>Culture change
@@ -434,7 +414,10 @@
 <ul>
 <li>Who is doing RAP and why</li>
 </ul></li>
-<li>Making sure the materials are accessIble <em>and</em> accessAble</li>
+<li>Making sure the materials are accessIble <em>and</em> accessAble
+<ul>
+<li>Open licence</li>
+</ul></li>
 <li>WAGOLL</li>
 <li>What is RAP?
 <ul>
@@ -474,6 +457,19 @@
 </ul></li>
 </ul>
 </section>
+<section id="my-experience-of-rap" class="slide level2">
+<h2>My experience of RAP</h2>
+<ul>
+<li><a href="https://chrisbeeley.net/?p=1660">I have been promoting RAP in my Trust for 10 years</a></li>
+<li>My entire journey with R was based on RAP</li>
+<li>My team is a leading practitioner of RAP across the NHS
+<ul>
+<li>Version control</li>
+<li>Common tools for data access</li>
+<li>Documentation and documented functions</li>
+</ul></li>
+</ul>
+</section>
 <section id="components-of-an-effective-journey-to-rap-and-what-it-means-for-the-role" class="slide level2">
 <h2>Components of an effective journey to RAP and what it means for the role</h2>
 <ul>
@@ -491,8 +487,15 @@
 <section id="components-of-an-effective-journey-to-rap-and-what-it-means-for-the-role-1" class="slide level2">
 <h2>Components of an effective journey to RAP and what it means for the role</h2>
 <ul>
-<li>“T- shaped” staff</li>
-<li>RAP is done by teams, not by individuals</li>
+<li>“T- shaped” staff
+<ul>
+<li>Data engineers who understand analytics</li>
+<li>Data scientists who understand data engineering</li>
+</ul></li>
+<li>RAP is done by teams, not by individuals
+<ul>
+<li>Some teams will be small, especially at first</li>
+</ul></li>
 <li>Selling the approach</li>
 <li>Selling delays and mishaps</li>
 <li>Selling openness</li>
@@ -780,7 +783,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
