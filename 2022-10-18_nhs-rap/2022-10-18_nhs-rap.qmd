@@ -16,18 +16,11 @@ It should cover:
 * The key issues in delivering training to NHS and care staff and how these might be overcome
 * Your reflections on the components of an effective journey to RAP and what this mean for this role -->
 
-## Suggested topics
-
-* What is RAP?
-* What is really good RAP?
-* Training
-* Components of an effective journey to RAP and what it means for the role
-
 ## What is RAP?
 
 * Same data, same results
 
-## What is the ultimate form of RAP?
+## What is my vision for RAP in health and care?
 
 * RAP is a whole organisation approach
     * RAP procurement of proprietary PHRs
@@ -36,8 +29,6 @@ It should cover:
 
 ## What is the ultimate form of RAP?
 
-* There are no SPOFs, and no hero coders
-    * Every line of code is tested and reviewed, and every line of code is understood by 2+ people
 * RAP is used to maximise transparency
     * Analyses are shared freely where possible within the organisation
     * Analytic code is *all* shared outside the organisation
@@ -47,6 +38,8 @@ It should cover:
 * Esteem of data engineering
     * Not just running a database, making it *work*
     * Data engineering is done to fulfil the analytics objectives of the organisation
+* There are no SPOFs, and no hero coders
+    * Every line of code is tested and reviewed, and every line of code is understood by 2+ people
     
 ## What is the ultimate form of RAP?
 
@@ -67,6 +60,7 @@ It should cover:
 * Making sure the materials are accessIble *and* accessAble
     * Open licence
 * WAGOLL
+* WAGEOLL
 * What is RAP? 
     * Is it data science?
     * Is it data engineering?
@@ -116,6 +110,10 @@ It should cover:
 * RAP is done by teams, not by individuals
   * Some teams will be small, especially at first
 * Selling the approach
+  * The wins are quick
+  * Better trained and maintained staff
+  * 
 * Selling delays and mishaps
+  * *Think* about IG
 * Selling openness
 
