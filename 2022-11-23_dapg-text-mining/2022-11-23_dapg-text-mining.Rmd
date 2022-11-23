@@ -1,0 +1,122 @@
+---
+title: "Text mining of patient experience data"
+subtitle: "Funded by NHSE"
+author: "Chris Beeley"
+institute: "Nottinghamshire Healthcare NHS Trust"
+date: "23rd November 2022"
+output:
+  xaringan::moon_reader:
+    css: 
+      - default
+      - css/nhsr.css
+      - css/nhsr-fonts.css
+    lib_dir: libs
+    seal: false
+    nature:
+      highlightStyle: googlecode
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+      ratio: "16:9"
+    includes:
+      after_body: [css/insert-logo.html]
+---
+
+```{r setup, include = FALSE}
+library(knitr)
+library(tidyverse)
+library(NHSRtheme)
+# set default options
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300)
+
+# uncomment the following lines if you want to use the NHS-R theme colours by default
+# scale_fill_continuous <- partial(scale_fill_nhs, discrete = FALSE)
+# scale_fill_discrete <- partial(scale_fill_nhs, discrete = TRUE)
+# scale_colour_continuous <- partial(scale_colour_nhs, discrete = FALSE)
+# scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
+```
+
+class: title-slide, left, bottom
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r paste0(rmarkdown::metadata$author, ", ", rmarkdown::metadata$institute)`
+### `r rmarkdown::metadata$date`
+
+---
+
+# Unsupervised methods ("Topic modelling")
+
+* Surveys and consultations
+* Topic discovery (incl. informing supervised work)
+* Simple and attractive methods like Top2Vec
+
+---
+
+# Supervised methods
+
+* Classifying patient experience data
+* Classifying incident data (ongoing work here)
+* Extracting diagnosis, pharmacy information, etc.
+  
+---
+
+# Early work
+
+* [Unsupervised learning](https://github.com/ChrisBeeley/naturallanguageprocessing)
+  * [More here from NHSX](https://github.com/nhsx/stm-survey-text)
+* Some early success with supervised learning led to...
+* Funded one year project (NHSE insight and feedback team)
+
+---
+
+# Principles of the work
+
+* Free and open source
+  * The four freedoms:
+  * Use, study, modify, distribute
+* Use it today if you want to
+* We are also building a frontend and hosting in the cloud
+  * £
+
+---
+
+# Year 1
+
+* [Classification algorithm in Python](https://github.com/CDU-data-science-team/pxtextmining)
+  * Classifies "theme" and "criticality"
+  * c. 75% and 60% accurate
+  * Fits lots of models and feature sets
+  * [Available as an R package](https://github.com/nhs-r-community/pxtextmineR)
+* [Dashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is less well developed but is proof of concept
+  * [Demo](https://feedbackmatters.uk/rsconnect/experience_a/)
+  
+---
+
+# External and internal evaluation
+
+* First year project was successful because:
+  * Free and open source
+  * Effective and easy to use code
+  * Designed alongside healthcare staff
+* Areas for improvement
+  * Multi label tagging
+  * "Sentiment"
+  * More detail in the theme categories
+  
+---
+
+# The future
+
+* New theme categories
+* New data, relabelled
+* Streamlined code
+* Better accuracy
+* Multi label
+* Better dashboard
+* Professionally hosted dashboard
+
