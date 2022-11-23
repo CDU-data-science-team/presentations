@@ -1,0 +1,1 @@
+[See the slides](https://cdu-data-science-team.github.io/presentations/2022-11-23_dapg-text-mining/2022-11-23_dapg-text-mining.html)

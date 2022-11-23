@@ -49,6 +49,22 @@ class: title-slide, left, bottom
 
 ---
 
+# Unsupervised methods ("Topic modelling")
+
+* Surveys and consultations
+* Topic discovery (incl. informing supervised work)
+* Simple and attractive methods like Top2Vec
+
+---
+
+# Supervised methods
+
+* Classifying patient experience data
+* Classifying incident data (ongoing work here)
+* Extracting diagnosis, pharmacy information, etc.
+  
+---
+
 # Early work
 
 * [Unsupervised learning](https://github.com/ChrisBeeley/naturallanguageprocessing)
@@ -65,7 +81,7 @@ class: title-slide, left, bottom
   * Use, study, modify, distribute
 * Use it today if you want to
 * We are also building a frontend and hosting in the cloud
-  * £££
+  * £
 
 ---
 
@@ -89,11 +105,18 @@ class: title-slide, left, bottom
   * Designed alongside healthcare staff
 * Areas for improvement
   * Multi label tagging
-  * "Criticality"
+  * "Sentiment"
   * More detail in the theme categories
   
 ---
 
 # The future
 
-* 
+* New theme categories
+* New data, relabelled
+* Streamlined code
+* Better accuracy
+* Multi label
+* Better dashboard
+* Professionally hosted dashboard
+
